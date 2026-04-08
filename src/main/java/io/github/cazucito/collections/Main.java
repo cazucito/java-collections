@@ -7,6 +7,7 @@
  * @author cazucito
  * @version 0.1.0-SNAPSHOT
  */
+
 package io.github.cazucito.collections;
 
 /**

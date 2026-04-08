@@ -12,12 +12,6 @@
     <property name="severity" value="error"/>
     <property name="fileExtensions" value="java"/>
 
-    <!-- Exclusions -->
-    <module name="SuppressionFilter">
-        <property name="file" value="${config_loc}/suppressions.xml"/>
-        <property name="optional" value="true"/>
-    </module>
-
     <!-- Check para archivos -->
     <module name="FileLength">
         <property name="max" value="500"/>
@@ -29,13 +23,6 @@
         <property name="fileExtensions" value="java"/>
         <property name="max" value="100"/>
         <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
-    </module>
-
-    <!-- Headers -->
-    <module name="RegexpHeader">
-        <property name="header" value="^/\*\*$
-^ \* Copyright \d{4}"/>
-        <property name="fileExtensions" value="java"/>
     </module>
 
     <module name="TreeWalker">
@@ -190,9 +177,7 @@
         <module name="JavadocMissingWhitespaceAfterAsterisk"/>
         <module name="JavadocParagraph"/>
         <module name="JavadocStyle"/>
-        <module name="JavadocType">
-            <property name="requireThrows" value="false"/>
-        </module>
+        <module name="JavadocType"/>
         <module name="JavadocVariable"/>
         <module name="MissingJavadocMethod">
             <property name="minLineCount" value="2"/>

@@ -12,6 +12,9 @@
 - **Documentation and comments:** Neutral Spanish
 - **Commits:** Neutral Spanish, following Conventional Commits
 
+### Java Version
+- **Java 17** (LTS) - Source and target compatibility
+
 ### Naming Conventions
 
 | Element | Convention | Example |

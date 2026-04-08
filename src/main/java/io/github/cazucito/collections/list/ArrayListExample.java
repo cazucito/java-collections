@@ -4,6 +4,7 @@
  *
  * <p>Clases de ejemplo para ilustrar el uso de List.
  */
+
 package io.github.cazucito.collections.list;
 
 import java.util.ArrayList;
