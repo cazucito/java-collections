@@ -1,54 +1,54 @@
 ---
 name: Feature Request
-about: Sugerir una nueva funcionalidad o mejora
+about: Suggest a new feature or improvement
 title: '[FEATURE] '
 labels: enhancement
 assignees: ''
 ---
 
-## 💡 Descripción de la Feature
+## 💡 Feature Description
 
-<!-- Describa la funcionalidad que le gustaría ver -->
+<!-- Describe the functionality you would like to see -->
 
-## 🎯 Motivación
+## 🎯 Motivation
 
-<!-- Explique por qué esta feature sería útil -->
+<!-- Explain why this feature would be useful -->
 
-## 📝 Propuesta de Implementación
+## 📝 Implementation Proposal
 
-<!-- Si tiene ideas sobre cómo implementarla, descríbalas aquí -->
+<!-- If you have ideas on how to implement it, describe them here -->
 
-### Ejemplo de uso esperado:
+### Expected usage example:
 
 ```gherkin
 # language: es
-Característica: [Nombre de la feature]
+Característica: [Feature name]
   Como desarrollador Java
-  Quiero [objetivo]
-  Para [beneficio]
+  Quiero [objective]
+  Para [benefit]
 
-  Escenario: [Descripción del escenario]
-    Dado [precondición]
-    Cuando [acción]
-    Entonces [resultado esperado]
+  Escenario: [Scenario description]
+    Dado [precondition]
+    Cuando [action]
+    Entonces [expected result]
 ```
 
-## 🔄 Alternativas Consideradas
+## 🔄 Alternatives Considered
 
-<!-- ¿Ha considerado otras formas de lograr esto? -->
+<!-- Have you considered other ways to achieve this? -->
 
-## 📚 Referencias
+## 📚 References
 
-<!-- Documentación, artículos o recursos relacionados -->
+<!-- Documentation, articles, or related resources -->
 
-## 🎯 Prioridad Sugerida
+## 🎯 Suggested Priority
 
-- [ ] Alta - Bloqueante para mi trabajo
-- [ ] Media - Mejoraría significativamente mi flujo
-- [ ] Baja - Sería bueno tenerlo
+- [ ] High - Blocking my work
+- [ ] Medium - Would significantly improve my workflow
+- [ ] Low - Would be nice to have
 
 ## ✅ Checklist
 
-- [ ] Esta feature no existe actualmente
-- [ ] He verificado que no está en el roadmap (ver `.agents/PLAN.md`)
-- [ ] Estoy dispuesto a contribuir con la implementación
+- [ ] This feature does not currently exist
+- [ ] I have verified it is not in the roadmap (see `.agents/PLAN.md`)
+- [ ] I am willing to contribute to the implementation

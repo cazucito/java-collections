@@ -1,82 +1,82 @@
 # Pull Request
 
-## 📋 Tipo de Cambio
+## 📋 Type of Change
 
-<!-- Marque con una x las opciones que apliquen -->
+<!-- Mark with an x the options that apply -->
 
-- [ ] ✨ Nueva funcionalidad (`feat`)
-- [ ] 🐛 Corrección de bug (`fix`)
-- [ ] 📝 Documentación (`docs`)
-- [ ] 💄 Estilo de código (`style`)
-- [ ] ♻️ Refactorización (`refactor`)
+- [ ] ✨ New feature (`feat`)
+- [ ] 🐛 Bug fix (`fix`)
+- [ ] 📝 Documentation (`docs`)
+- [ ] 💄 Code style (`style`)
+- [ ] ♻️ Refactoring (`refactor`)
 - [ ] 🧪 Tests (`test`)
-- [ ] 🔧 Tareas de mantenimiento (`chore`)
+- [ ] 🔧 Maintenance tasks (`chore`)
 
-## 📝 Descripción
+## 📝 Description
 
-<!-- Describa brevemente qué cambios introduce este PR -->
+<!-- Briefly describe what changes this PR introduces -->
 
-## 🎯 Motivación y Contexto
+## 🎯 Motivation and Context
 
-<!-- Explique por qué es necesario este cambio y qué problema resuelve -->
+<!-- Explain why this change is necessary and what problem it solves -->
 
-## 🔍 Cambios Realizados
+## 🔍 Changes Made
 
-<!-- Liste los cambios principales -->
+<!-- List the main changes -->
 - 
 - 
 - 
 
 ## ✅ Checklist
 
-### Antes de enviar:
-- [ ] He ejecutado `mvn clean verify` localmente y todos los tests pasan
-- [ ] El código sigue las convenciones del proyecto (ver `AGENTS.md`)
-- [ ] He agregado/actualizado la documentación necesaria
-- [ ] Los commits siguen el formato de Conventional Commits
-- [ ] No hay archivos sin formato (`mvn spotless:check` pasa)
+### Before submitting:
+- [ ] I have run `mvn clean verify` locally and all tests pass
+- [ ] The code follows project conventions (see `AGENTS.md`)
+- [ ] I have added/updated necessary documentation
+- [ ] Commits follow Conventional Commits format
+- [ ] No unformatted files (`mvn spotless:check` passes)
 
-### Calidad de código:
-- [ ] Checkstyle pasa sin violaciones
-- [ ] SpotBugs no reporta bugs
-- [ ] JaCoCo reporta cobertura >= 60%
-- [ ] Todos los tests nuevos pasan
+### Code quality:
+- [ ] Checkstyle passes without violations
+- [ ] SpotBugs reports no bugs
+- [ ] JaCoCo reports coverage >= 60%
+- [ ] All new tests pass
 
-### Para features de Collections:
-- [ ] He agregado el archivo `.feature` en español (`# language: es`)
-- [ ] He creado los step definitions correspondientes
-- [ ] La implementación tiene Javadoc en español neutro
-- [ ] He incluido ejemplos claros y autocontenidos
+### For Collections features:
+- [ ] I have added the `.feature` file in Spanish (`# language: es`)
+- [ ] I have created corresponding step definitions
+- [ ] Implementation has Javadoc in neutral Spanish
+- [ ] I have included clear and self-contained examples
 
-## 🧪 Tests
+## 🧪 Testing
 
-<!-- Describa cómo ha probado estos cambios -->
+<!-- Describe how you have tested these changes -->
 
 ```bash
-# Comandos ejecutados
+# Commands executed
 mvn clean verify
 
-# Resultado
+# Result
 [INFO] Tests run: X, Failures: 0, Errors: 0, Skipped: 0
 [INFO] BUILD SUCCESS
 ```
 
-## 📸 Screenshots / Evidencia
+## 📸 Screenshots / Evidence
 
-<!-- Si aplica, agregue screenshots o ejemplos de salida -->
+<!-- If applicable, add screenshots or output examples -->
 
-## 🔗 Issues Relacionados
+## 🔗 Related Issues
 
-<!-- Referencie issues relacionados (ej: Closes #123, Fixes #456) -->
+<!-- Reference related issues (e.g., Closes #123, Fixes #456) -->
 
 Closes #
 
-## 📝 Notas para el Reviewer
+## 📝 Notes for the Reviewer
 
-<!-- Información adicional que el revisor debería saber -->
+<!-- Additional information the reviewer should know -->
 
 ---
 
-## 📚 Referencias
+## 📚 References
 
-<!-- Documentación, ADRs o recursos relevantes -->
+<!-- Documentation, ADRs, or relevant resources -->

@@ -1,66 +1,66 @@
 ---
 name: Bug Report
-about: Reportar un bug o comportamiento inesperado
+about: Report a bug or unexpected behavior
 title: '[BUG] '
 labels: bug
 assignees: ''
 ---
 
-## 🐛 Descripción del Bug
+## 🐛 Bug Description
 
-<!-- Describa claramente qué bug ha encontrado -->
+<!-- Clearly describe the bug you have found -->
 
-## 🔍 Pasos para Reproducir
+## 🔍 Steps to Reproduce
 
-<!-- Liste los pasos para reproducir el comportamiento -->
+<!-- List the steps to reproduce the behavior -->
 
 1. 
 2. 
 3. 
 4. 
 
-## ✅ Comportamiento Esperado
+## ✅ Expected Behavior
 
-<!-- Describa qué debería suceder -->
+<!-- Describe what should happen -->
 
-## ❌ Comportamiento Actual
+## ❌ Actual Behavior
 
-<!-- Describa qué sucede en realidad -->
+<!-- Describe what actually happens -->
 
 ## 📸 Screenshots / Logs
 
-<!-- Si aplica, agregue screenshots o logs de error -->
+<!-- If applicable, add screenshots or error logs -->
 
 ```
-Pegue aquí logs o mensajes de error
+Paste logs or error messages here
 ```
 
-## 🖥️ Entorno
+## 🖥️ Environment
 
-<!-- Complete la información de su entorno -->
+<!-- Complete your environment information -->
 
-- **OS:** [ej: macOS 14, Windows 11, Ubuntu 22.04]
-- **Java Version:** [ej: 21.0.2]
-- **Maven Version:** [ej: 3.9.6]
-- **Branch/Commit:** [ej: main@a1b2c3d]
+- **OS:** [e.g., macOS 14, Windows 11, Ubuntu 22.04]
+- **Java Version:** [e.g., 21.0.2]
+- **Maven Version:** [e.g., 3.9.6]
+- **Branch/Commit:** [e.g., main@a1b2c3d]
 
-## 🔧 Comandos Ejecutados
+## 🔧 Commands Executed
 
 ```bash
-# Comando que causó el error
+# Command that caused the error
 mvn clean verify
 
-# O:
+# Or:
 mvn test
 ```
 
-## 📝 Información Adicional
+## 📝 Additional Information
 
-<!-- Cualquier otra información relevante -->
+<!-- Any other relevant information -->
 
-## ✅ Checklist del Reporte
+## ✅ Report Checklist
 
-- [ ] He buscado issues existentes antes de crear este
-- [ ] He proporcionado pasos claros de reproducción
-- [ ] He incluido información de mi entorno
-- [ ] He verificado que estoy en la última versión de main
+- [ ] I have searched existing issues before creating this one
+- [ ] I have provided clear reproduction steps
+- [ ] I have included my environment information
+- [ ] I have verified I am on the latest version of main
