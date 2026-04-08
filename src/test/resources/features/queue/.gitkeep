@@ -1,0 +1,32 @@
+# Queue Features
+
+This directory contains Gherkin feature files for Queue and Deque interface examples.
+
+## Planned Features
+
+- PriorityQueue (natural ordering, Comparator)
+- ArrayDeque (Stack and Queue operations)
+- LinkedList as Deque
+
+## Structure
+
+Each feature file should follow the pattern:
+```
+# language: es
+
+Característica: [Feature description]
+  Como desarrollador Java
+  Quiero [objective]
+  Para [benefit]
+
+  Escenario: [Scenario description]
+    Dado [precondition]
+    Cuando [action]
+    Entonces [expected result]
+```
+
+## Notes
+
+- All features should be written in neutral Spanish
+- Demonstrate FIFO (Queue) and LIFO (Stack) behaviors
+- Show differences between Queue implementations

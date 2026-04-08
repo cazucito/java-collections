@@ -1,0 +1,33 @@
+# Map Features
+
+This directory contains Gherkin feature files for Map interface examples.
+
+## Planned Features
+
+- HashMap operations
+- LinkedHashMap (insertion order)
+- TreeMap (sorted by key)
+- EnumMap (optional)
+
+## Structure
+
+Each feature file should follow the pattern:
+```
+# language: es
+
+Característica: [Feature description]
+  Como desarrollador Java
+  Quiero [objective]
+  Para [benefit]
+
+  Escenario: [Scenario description]
+    Dado [precondition]
+    Cuando [action]
+    Entonces [expected result]
+```
+
+## Notes
+
+- All features should be written in neutral Spanish
+- Include comprehensive scenarios covering edge cases
+- Focus on demonstrating Map-specific behaviors (key uniqueness, iteration, etc.)

@@ -1,0 +1,33 @@
+# Set Features
+
+This directory contains Gherkin feature files for Set interface examples.
+
+## Planned Features
+
+- HashSet (uniqueness, hashCode)
+- LinkedHashSet (insertion order preservation)
+- TreeSet (natural ordering, Comparator)
+
+## Structure
+
+Each feature file should follow the pattern:
+```
+# language: es
+
+Característica: [Feature description]
+  Como desarrollador Java
+  Quiero [objective]
+  Para [benefit]
+
+  Escenario: [Scenario description]
+    Dado [precondition]
+    Cuando [action]
+    Entonces [expected result]
+```
+
+## Notes
+
+- All features should be written in neutral Spanish
+- Focus on demonstrating uniqueness behavior
+- Include scenarios showing differences between Set implementations
+- Explain hashCode/equals contract for HashSet
