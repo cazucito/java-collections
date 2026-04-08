@@ -1,0 +1,7 @@
+/**
+ * Copyright 2024 cazucito
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * <p>Classes to illustrate the use of Set.
+ */
+package io.github.cazucito.collections.set;

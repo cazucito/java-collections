@@ -1,0 +1,7 @@
+/**
+ * Copyright 2024 cazucito
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * <p>Common utilities for the collections examples.
+ */
+package io.github.cazucito.collections.utils;
