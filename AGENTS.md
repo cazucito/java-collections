@@ -22,32 +22,32 @@
 
 ## 📚 Agent Context Files
 
-Este proyecto usa archivos de contexto extendidos ubicados en `.agents/` para mantener
-información entre sesiones de trabajo.
+This project uses extended context files located in `.agents/` to maintain
+information between work sessions.
 
-### Archivos Disponibles
+### Available Files
 
-| Archivo | Propósito | Leer cuando... | Actualizar cuando... |
-|---------|-----------|----------------|---------------------|
-| [`.agents/README.md`](.agents/README.md) | Índice y guía de uso | Primera vez | Nuevo archivo agregado |
-| [`.agents/HANDOFF.md`](.agents/HANDOFF.md) | Estado actual del trabajo | **Iniciar sesión** | **Terminar sesión** |
-| [`.agents/CONTEXT.md`](.agents/CONTEXT.md) | Decisiones arquitectónicas | Planificar features | Cambiar arquitectura |
-| [`.agents/MEMORY.md`](.agents/MEMORY.md) | Lecciones aprendidas | Antes de decisiones | Aprender algo nuevo |
-| [`.agents/STATE.md`](.agents/STATE.md) | Estado técnico del entorno | Debugging | Cambiar configuración |
-| [`.agents/SESSION.md`](.agents/SESSION.md) | Log de sesión actual | N/A | Durante la sesión |
-| [`.agents/PLAN.md`](.agents/PLAN.md) | Roadmap y planificación | Priorizar trabajo | Completar milestones |
+| File | Purpose | Read when... | Update when... |
+|------|---------|--------------|----------------|
+| [`.agents/README.md`](.agents/README.md) | Index and usage guide | First time | New file added |
+| [`.agents/HANDOFF.md`](.agents/HANDOFF.md) | Current work status | **Start session** | **End session** |
+| [`.agents/CONTEXT.md`](.agents/CONTEXT.md) | Architectural decisions | Planning features | Architecture changes |
+| [`.agents/MEMORY.md`](.agents/MEMORY.md) | Lessons learned | Before decisions | Learn something new |
+| [`.agents/STATE.md`](.agents/STATE.md) | Technical environment state | Debugging | Configuration changes |
+| [`.agents/SESSION.md`](.agents/SESSION.md) | Current session log | N/A | During session |
+| [`.agents/PLAN.md`](.agents/PLAN.md) | Roadmap and planning | Prioritizing work | Milestones completed |
 
-### Flujo de Trabajo Recomendado
+### Recommended Workflow
 
-**AL INICIAR CADA SESIÓN:**
-1. Leer `.agents/HANDOFF.md` para entender el estado actual
-2. Leer `.agents/CONTEXT.md` para recordar arquitectura
-3. Leer `.agents/MEMORY.md` para evitar errores conocidos
+**WHEN STARTING A SESSION:**
+1. Read `.agents/HANDOFF.md` to understand current status
+2. Read `.agents/CONTEXT.md` to remember architecture
+3. Read `.agents/MEMORY.md` to avoid known errors
 
-**ANTES DE TERMINAR:**
-1. Actualizar `.agents/HANDOFF.md` con el nuevo estado
-2. Actualizar `.agents/SESSION.md` con log de la sesión
-3. Limpiar `.agents/SESSION.md` si es necesario
+**BEFORE ENDING:**
+1. Update `.agents/HANDOFF.md` with new status
+2. Update `.agents/SESSION.md` with session log
+3. Clean up `.agents/SESSION.md` if needed
 
 ---
 
@@ -118,13 +118,13 @@ Format: `<type>(<scope>): <description>`
 
 | Type | Use | Example |
 |------|-----|---------|
-| `feat` | New functionality | `feat(set): agregar ejemplo de HashSet único` |
-| `fix` | Bug fix | `fix(list): corregir índice en ArrayListExample` |
-| `docs` | Documentation | `docs(readme): actualizar instrucciones de ejecución` |
-| `style` | Format changes (no logic change) | `style: aplicar formato con Spotless` |
-| `refactor` | Code refactoring | `refactor(map): simplificar lógica de búsqueda` |
-| `test` | Add or modify tests | `test(queue): agregar tests para PriorityQueue` |
-| `chore` | Maintenance tasks | `chore(deps): actualizar versión de Cucumber` |
+| `feat` | New functionality | `feat(set): add unique HashSet example` |
+| `fix` | Bug fix | `fix(list): fix index in ArrayListExample` |
+| `docs` | Documentation | `docs(readme): update execution instructions` |
+| `style` | Format changes (no logic change) | `style: apply Spotless formatting` |
+| `refactor` | Code refactoring | `refactor(map): simplify search logic` |
+| `test` | Add or modify tests | `test(queue): add tests for PriorityQueue` |
+| `chore` | Maintenance tasks | `chore(deps): update Cucumber version` |
 
 ### Common Scopes
 - `list` - Changes related to List
@@ -139,16 +139,16 @@ Format: `<type>(<scope>): <description>`
 
 ```bash
 # New functionality
-feat(list): agregar ejemplo de ordenamiento con Comparator
+feat(list): add sorting example with Comparator
 
 # Fix
-fix(set): validar elemento nulo antes de agregar
+fix(set): validate null element before adding
 
 # Tests
-test(map): agregar escenario de colisión de hash
+test(map): add hash collision scenario
 
 # Documentation
-docs: explicar diferencias entre ArrayList y LinkedList
+docs: explain differences between ArrayList and LinkedList
 ```
 
 ---
@@ -167,7 +167,7 @@ Format: `MAJOR.MINOR.PATCH`
 
 ```bash
 # Create version tag
-git tag -a v1.2.0 -m "feat: agregar ejemplos de Streams con Collections"
+git tag -a v1.2.0 -m "feat: add Streams with Collections examples"
 
 # Push tags
 git push origin --tags
@@ -218,8 +218,8 @@ mvn spotless:apply
 1. **All classes must have Javadoc** (in neutral Spanish)
    ```java
    /**
-    * Ejemplifica el uso de ArrayList para almacenar elementos.
-    * Demuestra operaciones básicas como agregar, eliminar y acceder.
+    * Demonstrates the use of ArrayList to store elements.
+    * Shows basic operations such as adding, removing, and accessing.
     */
    public class ArrayListExample {
    ```
@@ -227,18 +227,18 @@ mvn spotless:apply
 2. **All public methods must have Javadoc** (in neutral Spanish)
    ```java
    /**
-    * Agrega un elemento a la lista si no está duplicado.
+    * Adds an element to the list if it is not duplicated.
     *
-    * @param element el elemento a agregar
-    * @return true si se agregó, false si ya existía
+    * @param element the element to add
+    * @return true if added, false if it already existed
     */
    public boolean addUniqueElement(String element) {
    ```
 
 3. **Comments in neutral Spanish explaining complex logic**
    ```java
-   // Se utiliza LinkedList en lugar de ArrayList porque
-   // requerimos inserciones frecuentes al inicio de la colección
+   // LinkedList is used instead of ArrayList because
+   // we require frequent insertions at the beginning of the collection
    ```
 
 4. **Descriptive names, code in English**
@@ -298,7 +298,7 @@ mvn clean install
 - [Java Collections Framework](https://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html)
 - [Cucumber JVM Documentation](https://cucumber.io/docs/installation/java/)
 - [Conventional Commits](https://www.conventionalcommits.org/)
-- [Semantic Versioning](https://semver.org/lang/es/)
+- [Semantic Versioning](https://semver.org/)
 - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 
 ---
