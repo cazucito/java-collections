@@ -28,7 +28,7 @@
 - **Commits:** Neutral Spanish, following Conventional Commits
 
 ### Java Version
-- **Java 17** (LTS) - Source and target compatibility
+- **Java 21** (LTS) - Source and target compatibility
 
 ### Naming Conventions
 
