@@ -20,6 +20,37 @@
 
 ---
 
+## 📚 Agent Context Files
+
+Este proyecto usa archivos de contexto extendidos ubicados en `.agents/` para mantener
+información entre sesiones de trabajo.
+
+### Archivos Disponibles
+
+| Archivo | Propósito | Leer cuando... | Actualizar cuando... |
+|---------|-----------|----------------|---------------------|
+| [`.agents/README.md`](.agents/README.md) | Índice y guía de uso | Primera vez | Nuevo archivo agregado |
+| [`.agents/HANDOFF.md`](.agents/HANDOFF.md) | Estado actual del trabajo | **Iniciar sesión** | **Terminar sesión** |
+| [`.agents/CONTEXT.md`](.agents/CONTEXT.md) | Decisiones arquitectónicas | Planificar features | Cambiar arquitectura |
+| [`.agents/MEMORY.md`](.agents/MEMORY.md) | Lecciones aprendidas | Antes de decisiones | Aprender algo nuevo |
+| [`.agents/STATE.md`](.agents/STATE.md) | Estado técnico del entorno | Debugging | Cambiar configuración |
+| [`.agents/SESSION.md`](.agents/SESSION.md) | Log de sesión actual | N/A | Durante la sesión |
+| [`.agents/PLAN.md`](.agents/PLAN.md) | Roadmap y planificación | Priorizar trabajo | Completar milestones |
+
+### Flujo de Trabajo Recomendado
+
+**AL INICIAR CADA SESIÓN:**
+1. Leer `.agents/HANDOFF.md` para entender el estado actual
+2. Leer `.agents/CONTEXT.md` para recordar arquitectura
+3. Leer `.agents/MEMORY.md` para evitar errores conocidos
+
+**ANTES DE TERMINAR:**
+1. Actualizar `.agents/HANDOFF.md` con el nuevo estado
+2. Actualizar `.agents/SESSION.md` con log de la sesión
+3. Limpiar `.agents/SESSION.md` si es necesario
+
+---
+
 ## 📋 Project Conventions
 
 ### Languages
