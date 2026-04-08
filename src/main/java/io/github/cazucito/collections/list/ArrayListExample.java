@@ -1,10 +1,8 @@
 /**
- * Copyright 2024 cazucito
- * SPDX-License-Identifier: Apache-2.0
+ * Copyright 2024 cazucito SPDX-License-Identifier: Apache-2.0
  *
  * <p>Clases de ejemplo para ilustrar el uso de List.
  */
-
 package io.github.cazucito.collections.list;
 
 import java.util.ArrayList;
@@ -13,8 +11,7 @@ import java.util.List;
 /**
  * Ejemplifica el uso de ArrayList para almacenar y manipular elementos.
  *
- * <p>Demuestra operaciones básicas como agregar, eliminar, acceder y buscar
- * elementos en una lista.
+ * <p>Demuestra operaciones básicas como agregar, eliminar, acceder y buscar elementos en una lista.
  */
 public class ArrayListExample {
 
@@ -98,9 +95,7 @@ public class ArrayListExample {
     return elements.contains(element);
   }
 
-  /**
-   * Limpia todos los elementos de la lista.
-   */
+  /** Limpia todos los elementos de la lista. */
   public void clear() {
     elements.clear();
   }

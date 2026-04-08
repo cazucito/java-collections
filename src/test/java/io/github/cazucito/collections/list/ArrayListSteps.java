@@ -1,6 +1,5 @@
 /**
- * Copyright 2024 cazucito
- * SPDX-License-Identifier: Apache-2.0
+ * Copyright 2024 cazucito SPDX-License-Identifier: Apache-2.0
  *
  * <p>Step definitions para los scenarios de ArrayList.
  */
@@ -15,8 +14,8 @@ import io.cucumber.java.en.When;
 /**
  * Implementación de los steps para las pruebas de comportamiento de ArrayList.
  *
- * <p>Esta clase conecta los escenarios escritos en Gherkin con el código Java
- * que ejecuta las acciones y verifica los resultados.
+ * <p>Esta clase conecta los escenarios escritos en Gherkin con el código Java que ejecuta las
+ * acciones y verifica los resultados.
  */
 public class ArrayListSteps {
 
@@ -29,8 +28,7 @@ public class ArrayListSteps {
   /**
    * Inicializa un ArrayList vacío.
    *
-   * <p>Este step se ejecuta al inicio de los scenarios que requieren
-   * una lista vacía.
+   * <p>Este step se ejecuta al inicio de los scenarios que requieren una lista vacía.
    */
   @Given("un ArrayList vacío")
   public void unArrayListVacio() {
@@ -67,9 +65,7 @@ public class ArrayListSteps {
     listExample.removeElement(element);
   }
 
-  /**
-   * Limpia todos los elementos de la lista.
-   */
+  /** Limpia todos los elementos de la lista. */
   @When("limpio la lista")
   public void limpioLaLista() {
     listExample.clear();
@@ -116,17 +112,13 @@ public class ArrayListSteps {
     assertThat(listExample.getElement(index)).isEqualTo(expectedElement);
   }
 
-  /**
-   * Verifica que la última operación booleana retornó false.
-   */
+  /** Verifica que la última operación booleana retornó false. */
   @Then("la operación de segundo agregado debe retornar false")
   public void laOperacionDeSegundoAgregadoDebeRetornarFalse() {
     assertThat(lastOperationResult).isFalse();
   }
 
-  /**
-   * Verifica que la lista esté vacía.
-   */
+  /** Verifica que la lista esté vacía. */
   @Then("la lista debe estar vacía")
   public void laListaDebeEstarVacia() {
     assertThat(listExample.isEmpty()).isTrue();

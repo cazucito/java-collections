@@ -1,13 +1,11 @@
 /**
- * Copyright 2024 cazucito
- * SPDX-License-Identifier: Apache-2.0
+ * Copyright 2024 cazucito SPDX-License-Identifier: Apache-2.0
  *
  * <p>Ejemplos del API Java Collections con enfoque BDD/TDD
  *
  * @author cazucito
  * @version 0.1.0-SNAPSHOT
  */
-
 package io.github.cazucito.collections;
 
 /**

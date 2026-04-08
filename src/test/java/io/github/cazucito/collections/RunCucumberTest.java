@@ -1,6 +1,5 @@
 /**
- * Copyright 2024 cazucito
- * SPDX-License-Identifier: Apache-2.0
+ * Copyright 2024 cazucito SPDX-License-Identifier: Apache-2.0
  *
  * <p>Suite de tests para ejecutar Cucumber con JUnit 5.
  */
@@ -17,8 +16,8 @@ import org.junit.platform.suite.api.Suite;
 /**
  * Clase principal para la ejecución de tests de Cucumber.
  *
- * <p>Esta clase configura el entorno de ejecución de Cucumber con JUnit 5,
- * definiendo la ubicación de los archivos .feature y los step definitions.
+ * <p>Esta clase configura el entorno de ejecución de Cucumber con JUnit 5, definiendo la ubicación
+ * de los archivos .feature y los step definitions.
  *
  * <p>Para ejecutar: {@code mvn test}
  */
@@ -26,7 +25,9 @@ import org.junit.platform.suite.api.Suite;
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "io.github.cazucito.collections")
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, html:target/cucumber-report.html")
+@ConfigurationParameter(
+    key = PLUGIN_PROPERTY_NAME,
+    value = "pretty, html:target/cucumber-report.html")
 public class RunCucumberTest {
   // Clase vacía - la configuración se realiza mediante anotaciones
 }
