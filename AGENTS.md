@@ -218,8 +218,8 @@ mvn spotless:apply
 1. **All classes must have Javadoc** (in neutral Spanish)
    ```java
    /**
-    * Demonstrates the use of ArrayList to store elements.
-    * Shows basic operations such as adding, removing, and accessing.
+    * Ejemplifica el uso de ArrayList para almacenar elementos.
+    * Demuestra operaciones básicas como agregar, eliminar y acceder.
     */
    public class ArrayListExample {
    ```
@@ -227,18 +227,18 @@ mvn spotless:apply
 2. **All public methods must have Javadoc** (in neutral Spanish)
    ```java
    /**
-    * Adds an element to the list if it is not duplicated.
+    * Agrega un elemento a la lista si no está duplicado.
     *
-    * @param element the element to add
-    * @return true if added, false if it already existed
+    * @param element el elemento a agregar
+    * @return true si se agregó, false si ya existía
     */
    public boolean addUniqueElement(String element) {
    ```
 
 3. **Comments in neutral Spanish explaining complex logic**
    ```java
-   // LinkedList is used instead of ArrayList because
-   // we require frequent insertions at the beginning of the collection
+   // Se utiliza LinkedList en lugar de ArrayList porque
+   // requerimos inserciones frecuentes al inicio de la colección
    ```
 
 4. **Descriptive names, code in English**
