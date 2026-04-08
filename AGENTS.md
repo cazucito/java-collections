@@ -148,7 +148,7 @@ git push origin --tags
 
 ### Checkstyle
 - Verifies style conventions
-- Configuration: `config/checkstyle/checkstyle.xml`
+- Configuration: `src/test/resources/config/checkstyle/checkstyle.xml`
 - Execution: `mvn checkstyle:check`
 
 ### Spotless

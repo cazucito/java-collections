@@ -125,8 +125,8 @@
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>${checkstyle.version}</version>
         <configuration>
-          <configLocation>config/checkstyle/checkstyle.xml</configLocation>
-          <suppressionsLocation>config/checkstyle/suppressions.xml</suppressionsLocation>
+          <configLocation>src/test/resources/config/checkstyle/checkstyle.xml</configLocation>
+          <suppressionsLocation>src/test/resources/config/checkstyle/suppressions.xml</suppressionsLocation>
           <consoleOutput>true</consoleOutput>
           <failsOnError>true</failsOnError>
           <linkXRef>false</linkXRef>
@@ -151,7 +151,7 @@
           <effort>Max</effort>
           <threshold>Low</threshold>
           <failOnError>true</failOnError>
-          <includeFilterFile>config/spotbugs/include-filter.xml</includeFilterFile>
+          <includeFilterFile>src/test/resources/config/spotbugs/include-filter.xml</includeFilterFile>
         </configuration>
         <executions>
           <execution>
