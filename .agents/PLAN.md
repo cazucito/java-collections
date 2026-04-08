@@ -1,121 +1,121 @@
 # Project Roadmap
 
-> Planificación y milestones del proyecto java-collections
+> Planning and milestones for java-collections project
 
 ---
 
-## 🎯 Visión
+## 🎯 Vision
 
-Crear una colección completa de ejemplos del API Java Collections, demostrando
-mejores prácticas de desarrollo con BDD/TDD y código de calidad.
+Create a complete collection of Java Collections API examples, demonstrating
+best development practices with BDD/TDD and quality code.
 
 ---
 
 ## 📅 Milestones
 
-### Milestone 1: Fundamentos ✅
-**Estado:** Completado  
-**Fecha:** 2024-04-08  
+### Milestone 1: Foundations ✅
+**Status:** Completed  
+**Date:** 2024-04-08  
 
-- [x] Configuración del proyecto (Maven, Java 21)
-- [x] Herramientas de calidad (Checkstyle, SpotBugs, Spotless, JaCoCo)
-- [x] Ejemplo ArrayList completo con BDD
-- [x] Documentación inicial (AGENTS.md, README.md)
-- [x] Estructura de paquetes definida
+- [x] Project configuration (Maven, Java 21)
+- [x] Quality tools (Checkstyle, SpotBugs, Spotless, JaCoCo)
+- [x] Complete ArrayList example with BDD
+- [x] Initial documentation (AGENTS.md, README.md)
+- [x] Defined package structure
 
 ---
 
-### Milestone 2: Interfaces List
-**Estado:** En planificación  
-**Fecha estimada:** 2024-04-15  
-**Prioridad:** Alta
+### Milestone 2: List Interfaces
+**Status:** In planning  
+**Estimated Date:** 2024-04-15  
+**Priority:** High
 
 - [ ] **LinkedList**
-  - [ ] Feature file con 4-6 scenarios
+  - [ ] Feature file with 4-6 scenarios
   - [ ] Step definitions
-  - [ ] Implementación de ejemplo
-  - [ ] Diferencias vs ArrayList documentadas
+  - [ ] Example implementation
+  - [ ] Documented differences vs ArrayList
 
-- [ ] **Vector** (opcional, legado)
-  - [ ] Breve ejemplo de uso
-  - [ ] Nota sobre sincronización
+- [ ] **Vector** (optional, legacy)
+  - [ ] Brief usage example
+  - [ ] Note about synchronization
 
-- [ ] **Stack** (opcional, legado)
-  - [ ] Ejemplo básico
-  - [ ] Referencia a Deque como preferido
+- [ ] **Stack** (optional, legacy)
+  - [ ] Basic example
+  - [ ] Reference to Deque as preferred
 
 ---
 
-### Milestone 3: Interfaces Set
-**Estado:** Pendiente  
-**Fecha estimada:** 2024-04-22  
-**Prioridad:** Alta
+### Milestone 3: Set Interfaces
+**Status:** Pending  
+**Estimated Date:** 2024-04-22  
+**Priority:** High
 
 - [ ] **HashSet**
   - [ ] Feature file
   - [ ] Step definitions
-  - [ ] Implementación
-  - [ ] Explicar unicidad y hashCode
+  - [ ] Implementation
+  - [ ] Explain uniqueness and hashCode
 
 - [ ] **LinkedHashSet**
-  - [ ] Ejemplo de orden de inserción
-  - [ ] Comparación con HashSet
+  - [ ] Insertion order example
+  - [ ] Comparison with HashSet
 
 - [ ] **TreeSet**
-  - [ ] Ejemplo con orden natural
-  - [ ] Ejemplo con Comparator
-  - [ ] Explicar Comparable vs Comparator
+  - [ ] Natural order example
+  - [ ] Comparator example
+  - [ ] Explain Comparable vs Comparator
 
 ---
 
-### Milestone 4: Interfaces Map
-**Estado:** Pendiente  
-**Fecha estimada:** 2024-04-29  
-**Prioridad:** Alta
+### Milestone 4: Map Interfaces
+**Status:** Pending  
+**Estimated Date:** 2024-04-29  
+**Priority:** High
 
 - [ ] **HashMap**
-  - [ ] Feature file completo
-  - [ ] Manejo de colisiones
+  - [ ] Complete feature file
+  - [ ] Collision handling
   - [ ] get/put/remove/clear
-  - [ ] Iteración (entrySet, keySet, values)
+  - [ ] Iteration (entrySet, keySet, values)
 
 - [ ] **LinkedHashMap**
-  - [ ] Orden de inserción
-  - [ ] Casos de uso
+  - [ ] Insertion order
+  - [ ] Use cases
 
 - [ ] **TreeMap**
-  - [ ] Ordenamiento por clave
-  - [ ] Comparator personalizado
+  - [ ] Key ordering
+  - [ ] Custom Comparator
 
-- [ ] **EnumMap** (opcional)
-  - [ ] Ejemplo con enums
+- [ ] **EnumMap** (optional)
+  - [ ] Example with enums
 
 ---
 
-### Milestone 5: Interfaces Queue y Deque
-**Estado:** Pendiente  
-**Fecha estimada:** 2024-05-06  
-**Prioridad:** Media
+### Milestone 5: Queue and Deque Interfaces
+**Status:** Pending  
+**Estimated Date:** 2024-05-06  
+**Priority:** Medium
 
 - [ ] **PriorityQueue**
-  - [ ] Ordenamiento natural
+  - [ ] Natural ordering
   - [ ] Comparator
   - [ ] poll/peek/offer
 
 - [ ] **ArrayDeque**
   - [ ] Stack (push/pop)
   - [ ] Queue (add/remove)
-  - [ ] Ventajas sobre Stack/LinkedList
+  - [ ] Advantages over Stack/LinkedList
 
-- [ ] **LinkedList como Deque**
-  - [ ] Doble cola
+- [ ] **LinkedList as Deque**
+  - [ ] Double-ended queue
 
 ---
 
-### Milestone 6: Algoritmos y Utilidades
-**Estado:** Pendiente  
-**Fecha estimada:** 2024-05-13  
-**Prioridad:** Media
+### Milestone 6: Algorithms and Utilities
+**Status:** Pending  
+**Estimated Date:** 2024-05-13  
+**Priority:** Medium
 
 - [ ] **Collections Utility Class**
   - [ ] sort()
@@ -133,119 +133,119 @@ mejores prácticas de desarrollo con BDD/TDD y código de calidad.
 ---
 
 ### Milestone 7: Streams API
-**Estado:** Pendiente  
-**Fecha estimada:** 2024-05-20  
-**Prioridad:** Media
+**Status:** Pending  
+**Estimated Date:** 2024-05-20  
+**Priority:** Medium
 
-- [ ] **Conceptos Básicos**
+- [ ] **Basic Concepts**
   - [ ] stream() vs parallelStream()
   - [ ] filter/map/reduce
-  - [ ] collect() con Collectors
+  - [ ] collect() with Collectors
 
-- [ ] **Operaciones Intermedias**
+- [ ] **Intermediate Operations**
   - [ ] filter, map, flatMap
   - [ ] distinct, sorted
   - [ ] peek (debugging)
 
-- [ ] **Operaciones Terminales**
+- [ ] **Terminal Operations**
   - [ ] forEach, collect
   - [ ] reduce, count
   - [ ] anyMatch, allMatch, noneMatch
 
 ---
 
-### Milestone 8: Features Avanzadas
-**Estado:** Pendiente  
-**Fecha estimada:** 2024-05-27  
-**Prioridad:** Baja
+### Milestone 8: Advanced Features
+**Status:** Pending  
+**Estimated Date:** 2024-05-27  
+**Priority:** Low
 
-- [ ] **Genericos Avanzados**
+- [ ] **Advanced Generics**
   - [ ] Wildcards (? extends, ? super)
   - [ ] Type erasure
   - [ ] Bounded type parameters
 
 - [ ] **Performance**
   - [ ] ArrayList vs LinkedList benchmarks
-  - [ ] HashMap capacity y load factor
+  - [ ] HashMap capacity and load factor
   - [ ] Iterators vs for-each
 
-- [ ] **Concurrencia**
+- [ ] **Concurrency**
   - [ ] CopyOnWriteArrayList
   - [ ] ConcurrentHashMap
   - [ ] BlockingQueue
 
 ---
 
-### Milestone 9: CI/CD y Automatización
-**Estado:** Pendiente  
-**Fecha estimada:** 2024-06-03  
-**Prioridad:** Baja
+### Milestone 9: CI/CD and Automation
+**Status:** Pending  
+**Estimated Date:** 2024-06-03  
+**Priority:** Low
 
 - [ ] **GitHub Actions**
-  - [ ] Workflow de build
-  - [ ] Workflow de tests
-  - [ ] Publicación de reportes (JaCoCo, Checkstyle)
+  - [ ] Build workflow
+  - [ ] Test workflow
+  - [ ] Report publishing (JaCoCo, Checkstyle)
 
-- [ ] **SonarCloud** (opcional)
-  - [ ] Análisis de código
-  - [ ] Cobertura de código
+- [ ] **SonarCloud** (optional)
+  - [ ] Code analysis
+  - [ ] Code coverage
 
 - [ ] **Dependabot**
-  - [ ] Configuración avanzada
-  - [ ] Agrupación de updates
+  - [ ] Advanced configuration
+  - [ ] Update grouping
 
 ---
 
-## 📊 Métricas de Éxito
+## 📊 Success Metrics
 
-| Métrica | Meta | Actual |
-|---------|------|--------|
-| Cobertura de código | 80% | 60% |
-| Features Gherkin | 20+ | 1 (6 scenarios) |
-| Tipos de Collection | 10+ | 1 (ArrayList) |
-| Documentación | Completa | Inicial |
-| CI/CD | Automatizado | Manual |
-
----
-
-## 🎯 Criterios de Priorización
-
-### Alta Prioridad
-- Interfaces más usadas (List, Set, Map)
-- Features críticas para el entendimiento
-- Bloqueantes para otros milestones
-
-### Media Prioridad
-- Interfaces especializadas (Queue, Deque)
-- Features de conveniencia
-- Mejoras de documentación
-
-### Baja Prioridad
-- Features avanzadas
-- Optimizaciones
-- Integraciones externas
+| Metric | Target | Current |
+|--------|--------|---------|
+| Code Coverage | 80% | 60% |
+| Gherkin Features | 20+ | 1 (6 scenarios) |
+| Collection Types | 10+ | 1 (ArrayList) |
+| Documentation | Complete | Initial |
+| CI/CD | Automated | Manual |
 
 ---
 
-## 🔄 Metodología
+## 🎯 Prioritization Criteria
 
-1. **Cada Collection = 1 feature branch**
-2. **Cada feature branch incluye:**
+### High Priority
+- Most used interfaces (List, Set, Map)
+- Critical features for understanding
+- Blockers for other milestones
+
+### Medium Priority
+- Specialized interfaces (Queue, Deque)
+- Convenience features
+- Documentation improvements
+
+### Low Priority
+- Advanced features
+- Optimizations
+- External integrations
+
+---
+
+## 🔄 Methodology
+
+1. **Each Collection = 1 feature branch**
+2. **Each feature branch includes:**
    - Feature file (Gherkin)
    - Step definitions
-   - Implementación
-   - Tests pasando
-   - Documentación actualizada
-3. **Merge a main solo después de:**
-   - `mvn clean verify` exitoso
-   - Code review (si aplica)
-   - Documentación actualizada
+   - Implementation
+   - Passing tests
+   - Updated documentation
+3. **Merge to main only after:**
+   - Successful `mvn clean verify`
+   - Code review (if applicable)
+   - Updated documentation
 
 ---
 
-## 📝 Notas
+## 📝 Notes
 
-- Las fechas son estimaciones flexibles
-- Prioridades pueden cambiar según necesidades
-- Cada milestone debe ser demostrable
-- Documentación debe mantenerse actualizada
+- Dates are flexible estimates
+- Priorities may change according to needs
+- Each milestone must be demonstrable
+- Documentation must be kept up to date

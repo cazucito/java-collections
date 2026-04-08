@@ -1,27 +1,27 @@
 # Project Context
 
-> Contexto arquitectónico y decisiones técnicas del proyecto java-collections
+> Architectural context and technical decisions for java-collections project
 
 ---
 
-## 🏗️ Arquitectura
+## 🏗️ Architecture
 
-### Tipo de Proyecto
-- **Tipo:** Librería/Ejemplos educativos
-- **Enfoque:** Specification First (BDD/TDD)
-- **Empaquetado:** JAR estándar
+### Project Type
+- **Type:** Library/Educational Examples
+- **Approach:** Specification First (BDD/TDD)
+- **Packaging:** Standard JAR
 
-### Stack Tecnológico
+### Technology Stack
 
-| Capa | Tecnología | Versión |
-|------|------------|---------|
-| Lenguaje | Java | 21 LTS |
+| Layer | Technology | Version |
+|-------|------------|---------|
+| Language | Java | 21 LTS |
 | Build Tool | Maven | 3.9+ |
 | Testing | JUnit 5 | 5.10.1 |
 | BDD | Cucumber JVM | 7.14.0 |
 | Assertions | AssertJ | 3.27.7 |
 
-### Estructura de Paquetes
+### Package Structure
 
 ```
 io.github.cazucito.collections
@@ -29,116 +29,116 @@ io.github.cazucito.collections
 ├── set           # Set: HashSet, TreeSet, LinkedHashSet
 ├── map           # Map: HashMap, TreeMap, LinkedHashMap
 ├── queue         # Queue: PriorityQueue, Deque
-└── utils         # Utilidades comunes
+└── utils         # Common utilities
 ```
 
 ---
 
-## 🎯 Decisiones Técnicas (ADRs)
+## 🎯 Technical Decisions (ADRs)
 
-### ADR-001: Enfoque BDD con Cucumber
-**Estado:** Aceptado  
-**Fecha:** 2024-04-08  
+### ADR-001: BDD Approach with Cucumber
+**Status:** Accepted  
+**Date:** 2024-04-08  
 
-**Contexto:** Necesitamos ejemplos claros del API Collections que sirvan como documentación viva.
+**Context:** We need clear examples of the Collections API that serve as living documentation.
 
-**Decisión:** Usar Cucumber JVM con Gherkin para especificar comportamiento antes de implementar.
+**Decision:** Use Cucumber JVM with Gherkin to specify behavior before implementing.
 
-**Consecuencias:**
-- ✅ Documentación ejecutable
-- ✅ Tests legibles para no-desarrolladores
-- ✅ Especificaciones en español neutro
-- ❌ Overhead de mantener feature files
-
----
-
-### ADR-002: Convención de Idiomas
-**Estado:** Aceptado  
-**Fecha:** 2024-04-08  
-
-**Contexto:** El código debe ser profesional pero accesible para hablantes de español.
-
-**Decisión:**
-- Código fuente (clases, métodos, variables): **Inglés**
-- Documentación y comentarios: **Español neutro**
-- Commits: **Español neutro** (Conventional Commits)
-
-**Consecuencias:**
-- ✅ Código universal y reusable
-- ✅ Documentación comprensible para el equipo
-- ✅ Commits claros en el idioma del equipo
+**Consequences:**
+- ✅ Executable documentation
+- ✅ Readable tests for non-developers
+- ✅ Specifications in neutral Spanish
+- ❌ Overhead of maintaining feature files
 
 ---
 
-### ADR-003: Ubicación de Configuraciones de Calidad
-**Estado:** Aceptado  
-**Fecha:** 2024-04-08  
+### ADR-002: Language Convention
+**Status:** Accepted  
+**Date:** 2024-04-08  
 
-**Contexto:** Checkstyle y SpotBugs son herramientas de validación, no de producción.
+**Context:** Code must be professional but accessible to Spanish speakers.
 
-**Decisión:** Mover configuraciones de `config/` a `src/test/resources/config/`.
+**Decision:**
+- Source code (classes, methods, variables): **English**
+- Documentation and comments: **Neutral Spanish**
+- Commits: **English** (Conventional Commits)
 
-**Consecuencias:**
-- ✅ Separación clara entre código y config de testing
-- ✅ Root del proyecto más limpio
-- ✅ Configuraciones en contexto de test
-
----
-
-### ADR-004: Gestión de Dependencias
-**Estado:** Aceptado  
-**Fecha:** 2024-04-08  
-
-**Contexto:** Vulnerabilidades en dependencias transitivas (commons-compress, commons-io).
-
-**Decisión:** Usar `dependencyManagement` en pom.xml para forzar versiones seguras.
-
-**Consecuencias:**
-- ✅ Control explícito de versiones
-- ✅ Corrección de CVEs conocidos
-- ⚠️ Requiere mantenimiento manual
+**Consequences:**
+- ✅ Universal and reusable code
+- ✅ Documentation understandable for the team
+- ✅ Clear commits in the team's language
 
 ---
 
-## 📊 Estado de Features
+### ADR-003: Quality Configurations Location
+**Status:** Accepted  
+**Date:** 2024-04-08  
 
-| Feature | Estado | Notas |
+**Context:** Checkstyle and SpotBugs are validation tools, not production tools.
+
+**Decision:** Move configurations from `config/` to `src/test/resources/config/`.
+
+**Consequences:**
+- ✅ Clear separation between code and test config
+- ✅ Cleaner project root
+- ✅ Configurations in test context
+
+---
+
+### ADR-004: Dependency Management
+**Status:** Accepted  
+**Date:** 2024-04-08  
+
+**Context:** Vulnerabilities in transitive dependencies (commons-compress, commons-io).
+
+**Decision:** Use `dependencyManagement` in pom.xml to force secure versions.
+
+**Consequences:**
+- ✅ Explicit version control
+- ✅ Correction of known CVEs
+- ⚠️ Requires manual maintenance
+
+---
+
+## 📊 Feature Status
+
+| Feature | Status | Notes |
 |---------|--------|-------|
-| ArrayList | ✅ Completo | Ejemplo de referencia |
-| LinkedList | ⏳ Pendiente | - |
-| HashSet | ⏳ Pendiente | - |
-| TreeSet | ⏳ Pendiente | - |
-| HashMap | ⏳ Pendiente | - |
-| TreeMap | ⏳ Pendiente | - |
-| PriorityQueue | ⏳ Pendiente | - |
-| Deque | ⏳ Pendiente | - |
-| Streams | ⏳ Pendiente | - |
+| ArrayList | ✅ Complete | Reference example |
+| LinkedList | ⏳ Pending | - |
+| HashSet | ⏳ Pending | - |
+| TreeSet | ⏳ Pending | - |
+| HashMap | ⏳ Pending | - |
+| TreeMap | ⏳ Pending | - |
+| PriorityQueue | ⏳ Pending | - |
+| Deque | ⏳ Pending | - |
+| Streams | ⏳ Pending | - |
 
 ---
 
-## 🔧 Calidad de Código
+## 🔧 Code Quality
 
-### Herramientas Configuradas
-- **Checkstyle:** Validación de estilo (Google Java Style)
-- **SpotBugs:** Detección de bugs estáticos
-- **Spotless:** Formateo automático de código
-- **JaCoCo:** Cobertura de código (mínimo 60%)
+### Configured Tools
+- **Checkstyle:** Style validation (Google Java Style)
+- **SpotBugs:** Static bug detection
+- **Spotless:** Automatic code formatting
+- **JaCoCo:** Code coverage (minimum 60%)
 
-### Ejecución
+### Execution
 ```bash
-# Verificar todo
+# Verify everything
 mvn clean verify
 
-# Solo calidad de código
+# Code quality only
 mvn checkstyle:check spotbugs:check spotless:check
 
-# Formatear código
+# Format code
 mvn spotless:apply
 ```
 
 ---
 
-## 📚 Referencias Externas
+## 📚 External References
 
 - [Java Collections Framework](https://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html)
 - [Cucumber JVM Documentation](https://cucumber.io/docs/installation/java/)
@@ -146,10 +146,10 @@ mvn spotless:apply
 
 ---
 
-## 🔄 Changelog de Decisiones
+## 🔄 Decision Changelog
 
-| Fecha | Decisión | Motivo |
-|-------|----------|--------|
-| 2024-04-08 | Java 21 LTS | Versión estable con soporte extendido |
-| 2024-04-08 | Maven vs Gradle | Mayor adopción en enterprise Java |
-| 2024-04-08 | Cucumber + JUnit 5 | Estandar de la industria para BDD en Java |
+| Date | Decision | Reason |
+|------|----------|--------|
+| 2024-04-08 | Java 21 LTS | Stable version with extended support |
+| 2024-04-08 | Maven vs Gradle | Greater adoption in enterprise Java |
+| 2024-04-08 | Cucumber + JUnit 5 | Industry standard for BDD in Java |
