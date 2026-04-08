@@ -5,6 +5,21 @@
 
 ---
 
+## ⚠️ IMPORTANT: Decisions Requiring User Confirmation
+
+**The following changes MUST be confirmed with the user before implementation:**
+
+- **Java Version changes** (currently Java 17 LTS)
+- **Adding or removing dependencies** in `pom.xml`
+- **Adding or removing features** from the project
+- **Version upgrades** of any tool or library (Checkstyle, SpotBugs, Cucumber, etc.)
+- **Structural changes** to the project architecture
+- **Changes to quality gates** or code coverage thresholds
+
+**Always ask the user before making these types of changes.**
+
+---
+
 ## 📋 Project Conventions
 
 ### Languages
