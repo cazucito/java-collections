@@ -56,7 +56,8 @@ information between work sessions.
 ### Languages
 - **Source code:** English (class names, methods, variables, constants)
 - **Documentation and comments:** Neutral Spanish
-- **Commits:** Neutral Spanish, following Conventional Commits
+- **Commits:** English, following Conventional Commits
+- **Gherkin Features:** Neutral Spanish (with `# language: es` header)
 
 ### Java Version
 - **Java 21** (LTS) - Source and target compatibility

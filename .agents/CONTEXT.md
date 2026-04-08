@@ -62,11 +62,13 @@ io.github.cazucito.collections
 - Source code (classes, methods, variables): **English**
 - Documentation and comments: **Neutral Spanish**
 - Commits: **English** (Conventional Commits)
+- Gherkin Features: **Neutral Spanish** (with `# language: es` header)
 
 **Consequences:**
 - ✅ Universal and reusable code
-- ✅ Documentation understandable for the team
-- ✅ Clear commits in the team's language
+- ✅ Documentation and specifications understandable for the team
+- ✅ Clear commits in English for broader compatibility
+- ✅ Gherkin features readable by Spanish-speaking stakeholders
 
 ---
 

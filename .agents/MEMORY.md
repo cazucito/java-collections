@@ -19,9 +19,9 @@
 ### Established Conventions
 - **Source code:** English (classes, methods, variables)
 - **Comments:** Neutral Spanish
-- **Commits:** Neutral Spanish (Conventional Commits)
+- **Commits:** English (Conventional Commits)
 - **Documentation:** English (AGENTS.md, README.md)
-- **Gherkin Features:** Neutral Spanish
+- **Gherkin Features:** Neutral Spanish (with `# language: es` header)
 
 ### Language by File Type
 | File Type | Language |
