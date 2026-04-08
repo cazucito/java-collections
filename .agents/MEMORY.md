@@ -1,63 +1,63 @@
 # Agent Memory
 
-> Lecciones aprendidas, preferencias del usuario y errores comunes a evitar
+> Lessons learned, user preferences, and common errors to avoid
 
 ---
 
-## 👤 Preferencias del Usuario
+## 👤 User Preferences
 
-### Decisiones que REQUIEREN confirmación previa
-- ❌ **Cambios de versión de Java** (actual: 21 LTS)
-- ❌ **Agregar/eliminar dependencias** en pom.xml
-- ❌ **Agregar/eliminar features** del proyecto
-- ❌ **Version upgrades** de herramientas (Checkstyle, SpotBugs, Cucumber, etc.)
-- ❌ **Cambios estructurales** a la arquitectura
-- ❌ **Cambios a quality gates** o umbrales de cobertura
+### Changes that REQUIRE prior confirmation
+- ❌ **Java Version changes** (current: 21 LTS)
+- ❌ **Adding/removing dependencies** in pom.xml
+- ❌ **Adding/removing features** from the project
+- ❌ **Version upgrades** of tools (Checkstyle, SpotBugs, Cucumber, etc.)
+- ❌ **Structural changes** to architecture
+- ❌ **Changes to quality gates** or coverage thresholds
 
-**Regla:** Siempre preguntar antes de estos cambios.
+**Rule:** Always ask before these changes.
 
-### Convenciones Establecidas
-- **Código fuente:** Inglés (clases, métodos, variables)
-- **Comentarios:** Español neutro
-- **Commits:** Español neutro (Conventional Commits)
-- **Documentación:** Inglés (AGENTS.md, README.md)
-- **Features Gherkin:** Español neutro
+### Established Conventions
+- **Source code:** English (classes, methods, variables)
+- **Comments:** Neutral Spanish
+- **Commits:** Neutral Spanish (Conventional Commits)
+- **Documentation:** English (AGENTS.md, README.md)
+- **Gherkin Features:** Neutral Spanish
 
-### Idiomas por Tipo de Archivo
-| Tipo de Archivo | Idioma |
-|-----------------|--------|
-| `.java` | Código: Inglés, Comentarios: Español neutro |
-| `.feature` | Español neutro |
-| `.md` (root) | Inglés |
-| `.md` (.agents/) | Inglés |
-| Commits | Español neutro |
-
----
-
-## 📖 Lecciones Aprendidas
-
-### Lección 001: Checkstyle y Spotless
-**Problema:** Checkstyle requería línea en blanco entre Javadoc y `package`, pero Spotless (Google Java Format) la eliminaba.
-
-**Solución:** Quitar `PACKAGE_DEF` de la regla `EmptyLineSeparator` en checkstyle.xml.
-
-**Referencia:** Commit `c68ec31`
+### Language by File Type
+| File Type | Language |
+|-----------|----------|
+| `.java` | Code: English, Comments: Neutral Spanish |
+| `.feature` | Neutral Spanish |
+| `.md` (root) | English |
+| `.md` (.agents/) | English |
+| Commits | Neutral Spanish |
 
 ---
 
-### Lección 002: Java 21 vs Java 17
-**Problema:** pom.xml configurado para Java 21 pero sistema tenía Java 17 instalado.
+## 📖 Lessons Learned
 
-**Solución:** Detectar versión de Java instalada antes de configurar o preguntar al usuario.
+### Lesson 001: Checkstyle vs Spotless
+**Problem:** Checkstyle required blank line between Javadoc and `package`, but Spotless (Google Java Format) removed it.
 
-**Nota:** El usuario instaló Java 21 después, pero es mejor verificar primero.
+**Solution:** Remove `PACKAGE_DEF` from `EmptyLineSeparator` rule in checkstyle.xml.
+
+**Reference:** Commit `c68ec31`
 
 ---
 
-### Lección 003: Dependencia junit-platform-suite
-**Problema:** Cucumber con JUnit 5 requiere `junit-platform-suite` que no estaba en dependencias.
+### Lesson 002: Java 21 vs Java 17
+**Problem:** pom.xml configured for Java 21 but system had Java 17 installed.
 
-**Solución:** Agregar explícitamente:
+**Solution:** Detect installed Java version before configuring or ask user.
+
+**Note:** User installed Java 21 later, but better to verify first.
+
+---
+
+### Lesson 003: junit-platform-suite Dependency
+**Problem:** Cucumber with JUnit 5 requires `junit-platform-suite` not in dependencies.
+
+**Solution:** Add explicitly:
 ```xml
 <dependency>
     <groupId>org.junit.platform</groupId>
@@ -69,118 +69,118 @@
 
 ---
 
-### Lección 004: Spotless sobreescribe formato
-**Problema:** Al aplicar `mvn spotless:apply`, se pierden cambios manuales de formato que no cumplen Google Java Style.
+### Lesson 004: Spotless Overwrites Format
+**Problem:** When running `mvn spotless:apply`, manual format changes not matching Google Java Style are lost.
 
-**Solución:** Siempre ejecutar `mvn spotless:apply` antes de commit para evitar sorpresas.
-
----
-
-### Lección 005: Dependabot vs Manual
-**Problema:** Intentar resolver vulnerabilidades manualmente actualizando plugins.
-
-**Solución:** Dependabot de GitHub crea PRs automáticas que son más confiables. Aceptarlas es preferible.
-
-**Ejemplo:** AssertJ 3.24.2 → 3.27.7 resuelto via Dependabot PR #1.
+**Solution:** Always run `mvn spotless:apply` before commit to avoid surprises.
 
 ---
 
-### Lección 006: Configuraciones de Calidad en src/test/resources
-**Problema:** Configuraciones de Checkstyle/SpotBugs en root (`config/`) no reflejan que son de testing.
+### Lesson 005: Dependabot vs Manual
+**Problem:** Trying to resolve vulnerabilities manually by updating plugins.
 
-**Solución:** Mover a `src/test/resources/config/` para claridad semántica.
+**Solution:** GitHub Dependabot creates automatic PRs that are more reliable. Accepting them is preferred.
 
----
-
-## ⚠️ Errores Comunes y Cómo Evitarlos
-
-### Error: Olvidar `junit-platform-suite`
-**Síntoma:** `package org.junit.platform.suite.api does not exist`  
-**Prevención:** Siempre verificar esta dependencia cuando se configura Cucumber + JUnit 5
-
-### Error: Versión de Java inconsistente
-**Síntoma:** `invalid target release: 21`  
-**Prevención:** Verificar `java -version` antes de configurar pom.xml
-
-### Error: Conflicto Checkstyle/Spotless
-**Síntoma:** Checkstyle falla después de `spotless:apply`  
-**Prevención:** Asegurar que checkstyle.xml sea compatible con Google Java Format
-
-### Error: Dependencias transitivas vulnerables
-**Síntoma:** GitHub Dependabot alerta de CVEs  
-**Prevención:** Usar `dependencyManagement` para forzar versiones seguras o esperar PRs de Dependabot
+**Example:** AssertJ 3.24.2 → 3.27.7 resolved via Dependabot PR #1.
 
 ---
 
-## 💡 Tips y Trucos
+### Lesson 006: Quality Configurations in src/test/resources
+**Problem:** Checkstyle/SpotBugs configurations in root (`config/`) didn't reflect they are for testing.
 
-### Comandos Útiles
+**Solution:** Move to `src/test/resources/config/` for semantic clarity.
+
+---
+
+## ⚠️ Common Errors and How to Avoid Them
+
+### Error: Forgetting `junit-platform-suite`
+**Symptom:** `package org.junit.platform.suite.api does not exist`  
+**Prevention:** Always verify this dependency when setting up Cucumber + JUnit 5
+
+### Error: Inconsistent Java Version
+**Symptom:** `invalid target release: 21`  
+**Prevention:** Verify `java -version` before configuring pom.xml
+
+### Error: Checkstyle/Spotless Conflict
+**Symptom:** Checkstyle fails after `spotless:apply`  
+**Prevention:** Ensure checkstyle.xml is compatible with Google Java Format
+
+### Error: Vulnerable Transitive Dependencies
+**Symptom:** GitHub Dependabot alerts CVEs  
+**Prevention:** Use `dependencyManagement` to force secure versions or wait for Dependabot PRs
+
+---
+
+## 💡 Tips and Tricks
+
+### Useful Commands
 ```bash
-# Verificar todo antes de commit
+# Verify everything before commit
 mvn clean verify
 
-# Solo tests
+# Tests only
 mvn test
 
-# Solo calidad de código
+# Code quality only
 mvn checkstyle:check spotbugs:check spotless:check
 
-# Formatear todo
+# Format everything
 mvn spotless:apply
 
-# Reporte de cobertura
+# Coverage report
 mvn jacoco:report
-# Abrir: target/site/jacoco/index.html
+# Open: target/site/jacoco/index.html
 ```
 
-### Flujo BDD/TDD
-1. Escribir `.feature` con scenarios Gherkin
-2. Crear `*Steps.java` vacíos (Cucumber los detecta)
-3. Implementar código mínimo
-4. Refactorizar manteniendo tests verdes
+### BDD/TDD Flow
+1. Write `.feature` with Gherkin scenarios
+2. Create `*Steps.java` empty (Cucumber detects them)
+3. Implement minimum code
+4. Refactor keeping tests green
 
-### Convención de Commits
+### Commit Convention
 ```
-feat(list): agregar ejemplo de ordenamiento
-fix(set): validar elemento nulo
-test(map): agregar escenario de colisión
-docs(readme): actualizar instrucciones
-style: aplicar formato con Spotless
-refactor(queue): simplificar lógica
-chore(deps): actualizar versión de Cucumber
+feat(list): add sorting example
+fix(set): validate null element
+test(map): add collision scenario
+docs(readme): update instructions
+style: apply Spotless formatting
+refactor(queue): simplify logic
+chore(deps): update Cucumber version
 ```
 
 ---
 
-## 📚 Recursos Útiles
+## 📚 Useful Resources
 
-### Documentación Oficial
+### Official Documentation
 - [Java 21 API](https://docs.oracle.com/en/java/javase/21/docs/api/)
 - [Cucumber JVM](https://cucumber.io/docs/installation/java/)
 - [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
 - [AssertJ](https://assertj.github.io/doc/)
 
-### Guías de Estilo
+### Style Guides
 - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 - [Conventional Commits](https://www.conventionalcommits.org/)
 
 ---
 
-## 🔮 Predicciones
+## 🔮 Predictions
 
-### Próximas Necesidades Probables
-1. **GitHub Actions** - CI/CD automatizado
-2. **SonarQube** - Análisis de código más profundo
-3. **Ejemplos de Streams** - Con lambdas y method references
-4. **Performance Tests** - Comparar ArrayList vs LinkedList
-5. **Mutación Testing** - Con PIT (opcional)
+### Likely Future Needs
+1. **GitHub Actions** - Automated CI/CD
+2. **SonarQube** - Deeper code analysis
+3. **Streams Examples** - With lambdas and method references
+4. **Performance Tests** - Compare ArrayList vs LinkedList
+5. **Mutation Testing** - With PIT (optional)
 
 ---
 
-## 📝 Notas para Futuros Agentes
+## 📝 Notes for Future Agents
 
-- Este proyecto es **educativo**, el código debe ser claro antes que optimizado
-- Los ejemplos deben ser **autocontenidos** y fáciles de entender
-- **Siempre** ejecutar `mvn clean verify` antes de terminar
-- **Nunca** asumir permiso para cambiar versiones o agregar dependencias
-- Si algo no está claro, **preguntar al usuario**
+- This project is **educational**, code must be clear before optimized
+- Examples should be **self-contained** and easy to understand
+- **Always** run `mvn clean verify` before finishing
+- **Never** assume permission to change versions or add dependencies
+- If something is unclear, **ask the user**

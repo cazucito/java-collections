@@ -1,44 +1,44 @@
 # System State
 
-> Estado técnico del entorno de desarrollo
+> Technical state of the development environment
 
-**Última actualización:** 2024-04-08  
-**Sistema:** macOS (aarch64)
+**Last Updated:** 2024-04-08  
+**System:** macOS (aarch64)
 
 ---
 
 ## ☕ Java Environment
 
-### Versión Instalada
+### Installed Version
 ```
 openjdk version "17.0.17" 2025-10-21
 OpenJDK Runtime Environment Temurin-17.0.17+10
 OpenJDK 64-Bit Server VM (build 17.0.17+10, mixed mode, sharing)
 ```
 
-**Nota:** Proyecto configurado para Java 21 LTS pero sistema tiene Java 17 instalado.
+**Note:** Project configured for Java 21 LTS but system has Java 17 installed.
 
-### SDKs Disponibles (SDKMAN)
+### Available SDKs (SDKMAN)
 ```
 ~/.sdkman/candidates/java/
 ├── 17.0.17-tem/
 └── current -> 17.0.17-tem/
 ```
 
-### Java 21 - Instrucciones de Instalación
-Para instalar Java 21 (requerido por el proyecto):
+### Java 21 - Installation Instructions
+To install Java 21 (required by project):
 
 ```bash
-# Listar versiones disponibles
+# List available versions
 sdk list java | grep "21\."
 
-# Instalar Temurin 21 (recomendado)
+# Install Temurin 21 (recommended)
 sdk install java 21.0.2-tem
 
-# Establecer como default
+# Set as default
 sdk default java 21.0.2-tem
 
-# Verificar
+# Verify
 java -version
 ```
 
@@ -46,7 +46,7 @@ java -version
 
 ## 🔨 Maven
 
-### Versión
+### Version
 ```
 Apache Maven 3.9.14
 Maven home: /opt/homebrew/Cellar/maven/3.9.14/libexec
@@ -55,21 +55,21 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: "mac os x", version: "26.3.1", arch: "aarch64"
 ```
 
-### Instalación
+### Installation
 ```bash
 brew install maven
 ```
 
 ---
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 java-collections/
-├── AGENTS.md                          # Guía para agentes (root)
+├── AGENTS.md                          # Agent guide (root)
 ├── pom.xml                            # Maven build
-├── README.md                          # Documentación usuario
-├── .agents/                           # Archivos de contexto
+├── README.md                          # User documentation
+├── .agents/                           # Context files
 ├── .gitignore                         # Git exclusions
 └── src/
     ├── main/java/io/github/cazucito/collections/
@@ -95,9 +95,9 @@ java-collections/
 
 ---
 
-## ✅ Estado del Build
+## ✅ Build Status
 
-### Última Verificación
+### Last Verification
 ```bash
 $ mvn clean verify
 
@@ -107,17 +107,17 @@ $ mvn clean verify
 ```
 
 ### Quality Gates
-| Herramienta | Estado | Umbrales |
-|-------------|--------|----------|
-| Checkstyle | ✅ PASS | 0 violaciones |
+| Tool | Status | Thresholds |
+|------|--------|------------|
+| Checkstyle | ✅ PASS | 0 violations |
 | SpotBugs | ✅ PASS | 0 bugs |
-| Spotless | ✅ PASS | Formato correcto |
-| JaCoCo | ✅ PASS | 60% instrucciones, 50% branches |
-| Tests | ✅ PASS | 6/6 pasando |
+| Spotless | ✅ PASS | Format correct |
+| JaCoCo | ✅ PASS | 60% instructions, 50% branches |
+| Tests | ✅ PASS | 6/6 passing |
 
 ---
 
-## 🔧 Configuraciones Activas
+## 🔧 Active Configurations
 
 ### Maven Properties (pom.xml)
 ```properties
@@ -132,7 +132,7 @@ spotless.version=2.43.0
 jacoco.version=0.8.12
 ```
 
-### Dependencias Transitivas Forzadas
+### Forced Transitive Dependencies
 ```xml
 <dependencyManagement>
     <dependency>
@@ -152,74 +152,74 @@ jacoco.version=0.8.12
 
 ## 🌐 GitHub Integration
 
-### Repositorio Remoto
+### Remote Repository
 ```
 git@github.com:cazucito/java-collections.git
 ```
 
 ### Dependabot
-- ✅ Activo y funcionando
-- ✅ PR #1 aceptada (AssertJ 3.27.7)
-- ✅ Sin vulnerabilidades conocidas actualmente
+- ✅ Active and working
+- ✅ PR #1 accepted (AssertJ 3.27.7)
+- ✅ No known vulnerabilities currently
 
 ---
 
-## ⚠️ Problemas Conocidos
+## ⚠️ Known Issues
 
 ### 1. Java Version Mismatch
-**Estado:** ⚠️ Warning  
-**Descripción:** Proyecto requiere Java 21, sistema tiene Java 17  
-**Impacto:** Build fallará si no se instala Java 21  
-**Solución:** Instalar Java 21 via SDKMAN o Homebrew
+**Status:** ⚠️ Warning  
+**Description:** Project requires Java 21, system has Java 17  
+**Impact:** Build will fail if Java 21 not installed  
+**Solution:** Install Java 21 via SDKMAN or Homebrew
 
 ---
 
-## 🚀 Comandos de Verificación
+## 🚀 Verification Commands
 
 ```bash
-# Verificar versión de Java
+# Verify Java version
 java -version
 
-# Verificar Maven
+# Verify Maven
 mvn -version
 
-# Verificar estructura
+# Verify structure
 tree -L 3
 
-# Build completo
+# Full build
 mvn clean verify
 
-# Solo tests
+# Tests only
 mvn test
 
-# Calidad de código
+# Code quality
 mvn checkstyle:check spotbugs:check spotless:check
 
-# Reporte de cobertura
+# Coverage report
 mvn jacoco:report
 open target/site/jacoco/index.html
 ```
 
 ---
 
-## 📊 Métricas Actuales
+## 📊 Current Metrics
 
-| Métrica | Valor |
-|---------|-------|
-| Clases de producción | 2 |
-| Clases de test | 2 |
-| Features Gherkin | 1 (6 scenarios) |
-| Cobertura de código | >60% |
-| Líneas de código | ~500 |
-| Dependencias directas | 4 (test scope) |
-| Vulnerabilidades | 0 |
+| Metric | Value |
+|--------|-------|
+| Production classes | 2 |
+| Test classes | 2 |
+| Gherkin Features | 1 (6 scenarios) |
+| Code coverage | >60% |
+| Lines of code | ~500 |
+| Direct dependencies | 4 (test scope) |
+| Vulnerabilities | 0 |
 
 ---
 
-## 📝 Notas
+## 📝 Notes
 
-- Sistema operativo: macOS (ARM64/aarch64)
+- Operating system: macOS (ARM64/aarch64)
 - Package manager: Homebrew
 - Java version manager: SDKMAN
-- IDE recomendado: IntelliJ IDEA o VS Code
+- Recommended IDE: IntelliJ IDEA or VS Code
 - Terminal: zsh

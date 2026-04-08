@@ -1,40 +1,41 @@
 # Agent Context Files
 
-> Índice de archivos de contexto para agentes de IA trabajando en java-collections
+> Extended context files for AI agents working on java-collections
 
-## 📚 Archivos Disponibles
+## 📚 Available Files
 
-| Archivo | Propósito | Leer cuando... | Actualizar cuando... |
-|---------|-----------|----------------|---------------------|
-| [`HANDOFF.md`](HANDOFF.md) | Estado actual del trabajo | Iniciar una sesión | Terminar una sesión |
-| [`CONTEXT.md`](CONTEXT.md) | Decisiones arquitectónicas y contexto | Planificar features | Cambiar arquitectura |
-| [`MEMORY.md`](MEMORY.md) | Lecciones aprendidas y preferencias | Antes de decisiones | Aprender algo nuevo |
-| [`STATE.md`](STATE.md) | Estado técnico del entorno | Debugging | Cambiar configuración |
-| [`SESSION.md`](SESSION.md) | Log de sesión actual | N/A | Durante la sesión |
-| [`PLAN.md`](PLAN.md) | Roadmap y planificación | Priorizar trabajo | Completar milestones |
-
----
-
-## 🚀 Flujo de Trabajo Recomendado
-
-### Al iniciar una sesión:
-1. Leer `HANDOFF.md` para entender el estado actual
-2. Leer `CONTEXT.md` para recordar arquitectura
-3. Leer `MEMORY.md` para evitar errores conocidos
-
-### Durante la sesión:
-4. Documentar en `SESSION.md` las acciones realizadas
-5. Consultar `PLAN.md` para mantener foco
-
-### Al terminar una sesión:
-6. Actualizar `HANDOFF.md` con el nuevo estado
-7. Actualizar `MEMORY.md` si se aprendió algo nuevo
-8. Limpiar `SESSION.md` o archivarlo
+| File | Purpose | Read when... | Update when... |
+|------|---------|--------------|----------------|
+| [`README.md`](README.md) | Index and usage guide | First time | New file added |
+| [`HANDOFF.md`](HANDOFF.md) | Current work status | **Start session** | **End session** |
+| [`CONTEXT.md`](CONTEXT.md) | Architectural decisions | Planning features | Architecture changes |
+| [`MEMORY.md`](MEMORY.md) | Lessons learned | Before decisions | Learn something new |
+| [`STATE.md`](STATE.md) | Technical environment state | Debugging | Configuration changes |
+| [`SESSION.md`](SESSION.md) | Current session log | N/A | During session |
+| [`PLAN.md`](PLAN.md) | Roadmap and planning | Prioritizing work | Milestones completed |
 
 ---
 
-## 📝 Notas
+## 🚀 Recommended Workflow
 
-- Estos archivos están en **inglés** para consistencia con el código
-- Los comentarios en código fuente deben seguir en **español neutro**
-- Siempre verificar `AGENTS.md` en root para convenciones del proyecto
+### When starting a session:
+1. Read `HANDOFF.md` to understand current status
+2. Read `CONTEXT.md` to remember architecture
+3. Read `MEMORY.md` to avoid known errors
+
+### During the session:
+4. Document in `SESSION.md` actions performed
+5. Check `PLAN.md` to maintain focus
+
+### When ending a session:
+6. Update `HANDOFF.md` with new status
+7. Update `MEMORY.md` if something new was learned
+8. Clean up `SESSION.md` if needed
+
+---
+
+## 📝 Notes
+
+- These files are in **English** for consistency with code
+- Source code comments must remain in **neutral Spanish**
+- Always verify `AGENTS.md` in root for project conventions
