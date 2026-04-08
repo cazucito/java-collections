@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <!-- Excluir archivos de tests -->
+    <Match>
+        <Class name="~.*\..*Test" />
+    </Match>
+    <Match>
+        <Class name="~.*\..*Steps" />
+    </Match>
+    <Match>
+        <Class name="~.*\.RunCucumberTest" />
+    </Match>
+
+    <!-- Excluir falsos positivos comunes en ejemplos educativos -->
+    <Match>
+        <Bug pattern="DM_STRING_CTOR" />
+    </Match>
+    <Match>
+        <Bug pattern="DM_EXIT" />
+    </Match>
+    <Match>
+        <Bug pattern="SE_NO_SERIALVERSIONID" />
+    </Match>
+</FindBugsFilter>

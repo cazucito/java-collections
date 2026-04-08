@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Suprimir warnings para archivos de tests -->
+    <suppress checks="Javadoc" files=".*Test\.java"/>
+    <suppress checks="MagicNumber" files=".*Test\.java"/>
+    <suppress checks="MethodLength" files=".*Test\.java"/>
+    <suppress checks="ExecutableStatementCount" files=".*Test\.java"/>
+    <suppress checks="FileLength" files=".*Test\.java"/>
+
+    <!-- Suprimir warnings para step definitions de Cucumber -->
+    <suppress checks="Javadoc" files=".*Steps\.java"/>
+    <suppress checks="MethodLength" files=".*Steps\.java"/>
+
+    <!-- Suprimir warnings para clases de ejemplos de Collections -->
+    <suppress checks="MagicNumber" files=".*Example.*\.java"/>
+    <suppress checks="ExecutableStatementCount" files=".*Example.*\.java"/>
+</suppressions>
