@@ -60,6 +60,39 @@
 
 ---
 
+### Lesson 010: TreeSet Implementation Pattern
+**Date:** 2025-04-09
+**Context:** Implementing TreeSet example following BDD pattern
+
+**Key differences from HashSet:**
+- Elements are **sorted** (natural order or Comparator)
+- No null elements allowed (throws NullPointerException)
+- O(log n) operations instead of O(1)
+- Extra operations: first(), last(), headSet(), tailSet(), subSet()
+
+**Checkstyle learning:**
+- Must use `SortedSet` interface for field type, not `TreeSet` concrete class
+- This follows "program to interfaces" best practice
+
+**Pattern followed:**
+1. Feature file with 11 Gherkin scenarios in Spanish
+2. Step definitions using AssertJ with exception testing
+3. Example class using SortedSet interface
+
+**Scenarios covered:**
+- Automatic ordering of elements
+- No duplicates (Set behavior)
+- first() and last() access
+- headSet(), tailSet(), subSet() range operations
+- NullPointerException on null element
+
+**Files created:**
+- `treeset_operations.feature` (11 scenarios)
+- `TreeSetExample.java`
+- `TreeSetSteps.java`
+
+---
+
 ### Lesson 009: HashMap Implementation Pattern
 **Date:** 2025-04-09
 **Context:** Implementing HashMap example following BDD pattern
