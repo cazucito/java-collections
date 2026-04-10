@@ -1,0 +1,41 @@
+/* Estilos personalizados para Java Collections Examples */
+
+/* Mejorar la visualización de tablas */
+.md-typeset table:not([class]) {
+  font-size: 0.85rem;
+}
+
+/* Estilo para badges */
+.md-typeset img[src*="shields.io"] {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+/* Mejorar la navegación */
+.md-nav__link--active {
+  font-weight: 600;
+}
+
+/* Estilo para bloques de código */
+.md-typeset pre > code {
+  font-size: 0.9em;
+}
+
+/* Mejorar la legibilidad */
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Espaciado en listas */
+.md-typeset ul li,
+.md-typeset ol li {
+  margin-bottom: 0.25em;
+}
+
+/* Estilo para blockquotes */
+.md-typeset blockquote {
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding-left: 1em;
+  color: var(--md-default-fg-color--light);
+}
