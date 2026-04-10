@@ -212,25 +212,23 @@ best development practices with BDD/TDD and quality code.
 
 ---
 
-### Milestone 9: CI/CD and Automation ⏳
-**Status:** Pending  
+### Milestone 9: CI/CD and Automation ✅
+**Status:** Completed  
 **Estimated Date:** 2024-06-03  
+**Actual:** 2026-04-10  
 **Priority:** Low
 
-- [ ] **GitHub Actions**
-  - [ ] Build workflow on push/PR
-  - [ ] Test workflow with Maven
-  - [ ] Report publishing (JaCoCo, Checkstyle)
-  - [ ] Status badges in README
+- [x] **GitHub Actions**
+  - [x] Build workflow on push/PR
+  - [x] Test workflow with Maven (Java 21)
+  - [x] Artifact publishing (JaCoCo, Checkstyle, SpotBugs)
+  - [x] Status badges in README
 
-- [ ] **SonarCloud** (optional)
-  - [ ] Code analysis integration
-  - [ ] Code coverage tracking
-  - [ ] Quality gate configuration
-
-- [ ] **Dependabot**
-  - [ ] Advanced configuration
-  - [ ] Update grouping strategies
+- [x] **Dependabot**
+  - [x] Maven dependencies (weekly, grouped by patch/minor)
+  - [x] GitHub Actions updates
+  - [x] Auto-assign to cazucito
+  - [x] Labels and commit message prefixes
 
 ---
 

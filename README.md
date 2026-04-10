@@ -1,5 +1,10 @@
 # Java Collections Examples
 
+[![CI](https://github.com/cazucito/java-collections/actions/workflows/ci.yml/badge.svg)](https://github.com/cazucito/java-collections/actions)
+[![Java 21](https://img.shields.io/badge/Java-21-blue.svg)](https://openjdk.org/projects/jdk/21/)
+[![Maven](https://img.shields.io/badge/Maven-3.9+-blue.svg)](https://maven.apache.org/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
+
 > Ejemplos del API Java Collections con enfoque **BDD/TDD** y **especificación primero**.
 
 ## 🎯 Objetivo

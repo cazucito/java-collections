@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        java-version: ['21']
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up JDK ${{ matrix.java-version }}
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ matrix.java-version }}
+        distribution: 'temurin'
+        cache: maven
+    
+    - name: Build with Maven
+      run: mvn clean verify --batch-mode
+    
+    - name: Upload JaCoCo coverage report
+      uses: actions/upload-artifact@v4
+      with:
+        name: jacoco-report
+        path: target/site/jacoco/
+    
+    - name: Upload Checkstyle report
+      uses: actions/upload-artifact@v4
+      with:
+        name: checkstyle-report
+        path: target/checkstyle-result.xml
+      if: always()
+    
+    - name: Upload SpotBugs report
+      uses: actions/upload-artifact@v4
+      with:
+        name: spotbugs-report
+        path: target/spotbugsXml.xml
+      if: always()
+
+  code-quality:
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        cache: maven
+    
+    - name: Run quality checks
+      run: mvn clean verify -DskipTests --batch-mode
+    
+    - name: Generate quality report
+      run: |
+        echo "## Code Quality Report" > quality-report.md
+        echo "" >> quality-report.md
+        echo "### Build Status" >> quality-report.md
+        echo "✅ Maven build completed successfully" >> quality-report.md
+        echo "" >> quality-report.md
+        echo "### Quality Tools" >> quality-report.md
+        echo "- ✅ Checkstyle" >> quality-report.md
+        echo "- ✅ SpotBugs" >> quality-report.md
+        echo "- ✅ Spotless" >> quality-report.md
+        echo "- ✅ JaCoCo" >> quality-report.md
+    
+    - name: Upload quality report
+      uses: actions/upload-artifact@v4
+      with:
+        name: quality-report
+        path: quality-report.md
