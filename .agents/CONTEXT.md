@@ -108,7 +108,7 @@ io.github.cazucito.collections
 |---------|--------|-------|
 | ArrayList | ✅ Complete | Reference example |
 | LinkedList | ⏳ Pending | - |
-| HashSet | ⏳ Pending | - |
+| HashSet | ✅ Complete | 10 BDD scenarios implemented |
 | TreeSet | ⏳ Pending | - |
 | HashMap | ⏳ Pending | - |
 | TreeMap | ⏳ Pending | - |

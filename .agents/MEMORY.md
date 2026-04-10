@@ -36,6 +36,45 @@
 
 ## 📖 Lessons Learned
 
+### Lesson 007: HashSet Implementation Pattern
+**Date:** 2025-04-09
+**Context:** Implementing HashSet example following BDD pattern
+
+**Pattern followed:**
+1. Feature file with 10 Gherkin scenarios in Spanish
+2. Step definitions using AssertJ assertions
+3. Example class wrapping HashSet with clear API
+
+**Key scenarios covered:**
+- Adding unique elements
+- Handling duplicates (ignored in Set)
+- Null element support
+- Remove operations
+- Contains verification
+- Clear operation
+
+**Files created:**
+- `hashset_operations.feature` (10 scenarios)
+- `HashSetExample.java`
+- `HashSetSteps.java`
+
+---
+
+### Lesson 008: SDKMAN for Java/Maven Setup
+**Date:** 2025-04-09
+**Problem:** Environment without Java/Maven pre-installed
+
+**Solution:** Use SDKMAN for quick setup:
+```bash
+curl -s "https://get.sdkman.io" | bash
+sdk install java 21.0.5-tem
+sdk install maven 3.9.6
+```
+
+**Result:** Full toolchain available in ~2 minutes
+
+---
+
 ### Lesson 001: Checkstyle vs Spotless
 **Problem:** Checkstyle required blank line between Javadoc and `package`, but Spotless (Google Java Format) removed it.
 
