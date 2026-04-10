@@ -18,8 +18,8 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- Dependencias -->
-    <junit.version>5.10.1</junit.version>
-    <cucumber.version>7.34.3</cucumber.version>
+    <junit.version>5.11.4</junit.version>
+    <cucumber.version>7.20.1</cucumber.version>
     <assertj.version>3.27.7</assertj.version>
 
     <!-- Plugins de calidad -->
@@ -43,6 +43,22 @@
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>
         <version>2.21.0</version>
+      </dependency>
+      <!-- Alinear todas las dependencias de JUnit Platform -->
+      <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-engine</artifactId>
+        <version>1.11.4</version>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-commons</artifactId>
+        <version>1.11.4</version>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-launcher</artifactId>
+        <version>1.11.4</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -70,7 +86,19 @@
     <dependency>
       <groupId>org.junit.platform</groupId>
       <artifactId>junit-platform-suite</artifactId>
-      <version>1.10.1</version>
+      <version>1.11.4</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-engine</artifactId>
+      <version>1.11.4</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.platform</groupId>
+      <artifactId>junit-platform-launcher</artifactId>
+      <version>1.11.4</version>
       <scope>test</scope>
     </dependency>
 
