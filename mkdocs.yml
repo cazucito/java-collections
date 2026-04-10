@@ -16,23 +16,26 @@ theme:
   favicon: material/library
   icon:
     repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: blue
+      accent: pink
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: Cambiar a modo oscuro
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: blue
+      accent: pink
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Cambiar a modo claro
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -56,8 +59,15 @@ plugins:
       lang: 
         - es
         - en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - minify:
       minify_html: true
+  - privacy:
+      assets: true
+      assets_exclude: 
+        - cdn.jsdelivr.net
+        - fonts.googleapis.com
+        - fonts.gstatic.com
 
 markdown_extensions:
   - pymdownx.highlight:
