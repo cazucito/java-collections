@@ -4,7 +4,7 @@
 
   <groupId>io.github.cazucito</groupId>
   <artifactId>java-collections</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>Java Collections Examples</name>
