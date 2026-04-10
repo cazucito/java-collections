@@ -237,15 +237,24 @@ best development practices with BDD/TDD and quality code.
 **Date:** 2026-04-10  
 **Priority:** High
 
-- [x] **CASOS_DE_USO.md** - Practical use cases for each collection
-  - [x] Real-world application examples
-  - [x] Selection guide by use case
-  - [x] Complexity comparison table
+- [x] **MkDocs Documentation Site**
+  - [x] mkdocs.yml configuration with Material theme
+  - [x] GitHub Pages deployment workflow
+  - [x] Spanish language support
+  - [x] Search functionality
 
-- [x] **FEATURES_PENDIENTES.md** - Future roadmap documentation
-  - [x] 5 proposed features with BDD scenarios
-  - [x] Priority and complexity assessment
-  - [x] Anti-patterns, Design Patterns, Modern Java, Serialization, Debugging
+- [x] **Documentation Structure**
+  - [x] Introduction and Getting Started guides
+  - [x] Collections reference (List, Set, Map, Queue)
+  - [x] Advanced topics (Streams, Generics, Concurrency)
+  - [x] Anti-patterns guide
+  - [x] Performance and best practices
+  - [x] FAQ and troubleshooting
+
+- [x] **Legacy Documentation**
+  - [x] **CASOS_DE_USO.md** - Practical use cases for each collection
+  - [x] **FEATURES_PENDIENTES.md** - Future roadmap documentation
+  - [x] **README.md** - Project overview with badges
 
 ---
 
