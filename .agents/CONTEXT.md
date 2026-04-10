@@ -115,7 +115,8 @@ io.github.cazucito.collections
 | PriorityQueue | ✅ Complete | 11 BDD scenarios implemented |
 | LinkedHashMap | ✅ Complete | 10 BDD scenarios implemented |
 | LinkedHashSet | ✅ Complete | 10 BDD scenarios implemented |
-| Deque | ⏳ Pending | - |
+| ArrayDeque | ✅ Complete | 10 BDD scenarios implemented |
+| Streams | ⏳ Pending | - |
 | Streams | ⏳ Pending | - |
 
 ---
