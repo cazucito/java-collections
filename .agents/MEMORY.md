@@ -60,6 +60,36 @@
 
 ---
 
+### Lesson 009: HashMap Implementation Pattern
+**Date:** 2025-04-09
+**Context:** Implementing HashMap example following BDD pattern
+
+**Key differences from List/Set:**
+- Stores key-value pairs, not single elements
+- Access by key (String), not by numeric index
+- Keys are unique (like Set), values can duplicate
+- Allows null key and null values
+
+**Pattern followed:**
+1. Feature file with 13 Gherkin scenarios in Spanish
+2. Step definitions using AssertJ with key-value syntax: `clave -> valor`
+3. Example class wrapping HashMap
+
+**Scenarios covered:**
+- Basic put/get operations
+- Key uniqueness (overwrites on duplicate)
+- Value duplicates allowed
+- containsKey vs containsValue
+- Null key and null value support
+- remove by key
+
+**Files created:**
+- `hashmap_operations.feature` (13 scenarios)
+- `HashMapExample.java`
+- `HashMapSteps.java`
+
+---
+
 ### Lesson 008: SDKMAN for Java/Maven Setup
 **Date:** 2025-04-09
 **Problem:** Environment without Java/Maven pre-installed
