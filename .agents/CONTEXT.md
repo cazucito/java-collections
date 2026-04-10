@@ -114,6 +114,7 @@ io.github.cazucito.collections
 | TreeMap | ✅ Complete | 13 BDD scenarios implemented |
 | PriorityQueue | ✅ Complete | 11 BDD scenarios implemented |
 | LinkedHashMap | ✅ Complete | 10 BDD scenarios implemented |
+| LinkedHashSet | ✅ Complete | 10 BDD scenarios implemented |
 | Deque | ⏳ Pending | - |
 | Streams | ⏳ Pending | - |
 
