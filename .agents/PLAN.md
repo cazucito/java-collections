@@ -251,22 +251,25 @@ best development practices with BDD/TDD and quality code.
 
 ---
 
-## 🆕 Milestone 11: Anti-Patterns and Common Errors ⏳
-**Status:** Proposed  
+## 🆕 Milestone 11: Anti-Patterns and Common Errors ✅
+**Status:** Completed  
 **Estimated Date:** TBD  
+**Actual:** 2026-04-10  
 **Priority:** High
 
-- [ ] **Common Mistakes**
-  - [ ] ConcurrentModificationException scenarios
-  - [ ] Memory leaks with static collections
-  - [ ] Using == instead of equals()
-  - [ ] Modifying mutable objects used as keys
-  - [ ] Incorrect stream operation ordering
+- [x] **Common Mistakes** (11 scenarios)
+  - [x] Memory leaks with static collections - grow without limit, never garbage collected
+  - [x] ConcurrentModificationException - removing during for-each iteration
+  - [x] Using == instead of equals() - reference vs value equality
+  - [x] Modifying mutable objects used as keys - breaks HashMap contract
+  - [x] HashSet with reference equality issues
 
-- [ ] **Best Practices**
-  - [ ] Defensive copying
-  - [ ] Choosing the right collection
-  - [ ] Capacity planning
+- [x] **Solutions Demonstrated**
+  - [x] Clear static collections to prevent memory leaks
+  - [x] Use Iterator.remove() for safe removal during iteration
+  - [x] Use removeIf() for functional removal
+  - [x] Always use equals() for value comparison
+  - [x] Use immutable objects as keys
 
 ---
 

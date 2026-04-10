@@ -101,6 +101,14 @@
       <version>${assertj.version}</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- SpotBugs annotations para suprimir warnings intencionales -->
+    <dependency>
+      <groupId>com.github.spotbugs</groupId>
+      <artifactId>spotbugs-annotations</artifactId>
+      <version>4.8.6</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <build>
