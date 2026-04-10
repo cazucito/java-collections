@@ -179,8 +179,8 @@ best development practices with BDD/TDD and quality code.
 
 ---
 
-### Milestone 8: Advanced Features ✅ / ⏳
-**Status:** Partially Completed  
+### Milestone 8: Advanced Features ✅
+**Status:** Completed  
 **Estimated Date:** 2024-05-27  
 **Actual:** 2026-04-10
 
@@ -203,12 +203,12 @@ best development practices with BDD/TDD and quality code.
   - [x] Multiple field sorting
   - [x] TreeMap with custom Comparator
 
-#### Pending:
-- [ ] **Advanced Generics**
-  - [ ] Wildcards (? extends, ? super)
-  - [ ] PECS principle (Producer Extends, Consumer Super)
-  - [ ] Type erasure
-  - [ ] Bounded type parameters
+- [x] **Advanced Generics** (12 scenarios)
+  - [x] Wildcards (? extends, ? super, ? unbounded)
+  - [x] PECS principle (Producer Extends, Consumer Super)
+  - [x] Type erasure - same class at runtime for all generic types
+  - [x] Bounded type parameters (<T extends Number>)
+  - [x] Multiple bounds (<T extends Comparable<T>>)
 
 ---
 
