@@ -1,14 +1,16 @@
 # ConcurrentModificationException
 
-Evita esta excepción común al iterar colecciones.
+Error común al modificar colecciones durante iteración.
 
 ## El problema
 
 ```java
-// ❌ MAL: Lanza ConcurrentModificationException
-for (String s : list) {
-    if (s.equals("remove")) {
-        list.remove(s); // ¡Excepción!
+// ❌ Lanza ConcurrentModificationException
+List<String> lista = new ArrayList<>(Arrays.asList("A", "B", "C", "D"));
+
+for (String s : lista) {
+    if (s.equals("B")) {
+        lista.remove(s); // ¡Excepción!
     }
 }
 ```
@@ -18,11 +20,12 @@ for (String s : list) {
 ### 1. Iterator.remove()
 
 ```java
-// ✅ BIEN: Usar Iterator
-Iterator<String> it = list.iterator();
+// ✅ Usar Iterator explícito
+Iterator<String> it = lista.iterator();
 while (it.hasNext()) {
-    if (it.next().equals("remove")) {
-        it.remove();
+    String s = it.next();
+    if (s.equals("B")) {
+        it.remove(); // Safe
     }
 }
 ```
@@ -30,21 +33,45 @@ while (it.hasNext()) {
 ### 2. removeIf() (Java 8+)
 
 ```java
-// ✅ MEJOR: Método funcional
-list.removeIf(s -> s.equals("remove"));
+// ✅ Mejor solución funcional
+lista.removeIf(s -> s.equals("B"));
 ```
 
-### 3. Copia de la colección
+### 3. Copiar la colección
 
 ```java
-// ✅ Alternativa: Iterar sobre copia
-for (String s : new ArrayList<>(list)) {
-    if (s.equals("remove")) {
-        list.remove(s);
+// ✅ Iterar sobre copia, modificar original
+for (String s : new ArrayList<>(lista)) {
+    if (s.equals("B")) {
+        lista.remove(s);
     }
 }
 ```
 
-## Próximamente
+### 4. Collect y reasignar (Streams)
 
-Documentación completa con escenarios BDD.
+```java
+// ✅ Filtrar con Stream
+lista = lista.stream()
+    .filter(s -> !s.equals("B"))
+    .collect(Collectors.toList());
+```
+
+## Escenarios BDD
+
+```gherkin
+Escenario: Remover con Iterator evita excepción
+  Dado una lista con elementos
+  Cuando uso Iterator.remove() durante iteración
+  Entonces no hay excepción
+  Y el elemento se elimina
+
+Escenario: removeIf elimina elementos
+  Dado una lista con "A", "B", "C"
+  Cuando uso removeIf para eliminar "B"
+  Entonces la lista contiene "A" y "C"
+```
+
+## Conclusión
+
+Nunca modifiques directamente una colección mientras la iteras. Usa Iterator.remove(), removeIf(), o crea una copia.

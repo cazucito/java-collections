@@ -1,29 +1,46 @@
 # TreeMap
 
-`TreeMap` implementa la interfaz `Map` usando un **Red-Black Tree**.
+`TreeMap` implementa la interfaz `Map` usando un **Red-Black Tree**. Mantiene las claves ordenadas.
 
 ## Características
 
-- ✅ Claves ordenadas (natural o Comparator)
-- ✅ Operaciones: **O(log n)**
-- ❌ No permite null key
-- ❌ Más lento que HashMap
+| Aspecto | Detalle |
+|---------|---------|
+| **Estructura** | Red-Black Tree (árbol auto-balanceado) |
+| **Orden** | Claves ordenadas (natural o Comparator) |
+| **Claves únicas** | No permite duplicados |
+| **Operaciones** | get, put, remove: O(log n) |
+| **Null** | **NO** permite clave `null` |
 
 ## Cuándo usar
 
 - Necesitas claves ordenadas
-- Rangos de búsqueda (subMap, headMap, tailMap)
-- Historial ordenado por timestamp
+- Búsquedas por rango (subMap, headMap, tailMap)
+- Ordenación natural de claves
 
-## Ejemplo
+## Ejemplos
 
 ```java
-Map<String, Integer> ordenado = new TreeMap<>();
-ordenado.put("Charlie", 30);
-ordenado.put("Alice", 25);
-System.out.println(ordenado.keySet()); // [Alice, Charlie]
+// Orden natural
+Map<String, Integer> notas = new TreeMap<>();
+notas.put("Carlos", 85);
+notas.put("Ana", 92);
+notas.put("Beatriz", 78);
+// Itera: Ana → Beatriz → Carlos
+
+// Comparator personalizado (inverso)
+Map<String, Integer> descendente = new TreeMap<>(
+    Comparator.reverseOrder()
+);
+
+// Rango de búsqueda
+SortedMap<String, Integer> aprobados = 
+    notas.tailMap("C"); // Carlos en adelante
 ```
 
-## Próximamente
+## Escenarios BDD
 
-Documentación completa con escenarios BDD.
+El proyecto incluye tests para:
+- Ordenación de claves
+- Búsquedas por rango
+- Operaciones de navegación (firstKey, lastKey)

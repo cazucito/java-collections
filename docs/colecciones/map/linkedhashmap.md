@@ -1,31 +1,52 @@
 # LinkedHashMap
 
-`LinkedHashMap` combina **HashMap** con una **lista enlazada** para mantener orden de inserción.
+`LinkedHashMap` combina **HashMap** con una **lista enlazada** que mantiene el orden de inserción de las entradas.
 
 ## Características
 
-- ✅ Mantiene orden de inserción
-- ✅ Operaciones: **O(1)**
-- ✅ Permite null key y values
-- ✅ Ideal para LRU Cache
+| Aspecto | Detalle |
+|---------|---------|
+| **Estructura** | Hash table + Doubly linked list |
+| **Orden** | Orden de inserción (o acceso con accessOrder=true) |
+| **Claves únicas** | No permite duplicados |
+| **Operaciones** | get, put: O(1) |
+| **Null** | Permite clave `null` y valor `null` |
 
 ## Cuándo usar
 
-- Caché LRU (Least Recently Used)
-- Configuración ordenada
-- Prediccible iteración sobre entradas
+- Necesitas orden de inserción
+- Implementar LRU Cache
+- Iteración predecible sobre entradas
 
-## LRU Cache ejemplo
+## Ejemplo: LRU Cache
 
 ```java
-Map<String, String> cache = new LinkedHashMap<>(16, 0.75f, true) {
-    @Override
-    protected boolean removeEldestEntry(Map.Entry<String, String> eldest) {
-        return size() > 100; // Máximo 100 entradas
+class LRUCache<K, V> extends LinkedHashMap<K, V> {
+    private final int capacidad;
+    
+    public LRUCache(int capacidad) {
+        super(capacidad, 0.75f, true); // accessOrder = true
+        this.capacidad = capacidad;
     }
-};
+    
+    @Override
+    protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
+        return size() > capacidad;
+    }
+}
+
+// Uso
+LRUCache<String, String> cache = new LRUCache<>(3);
+cache.put("A", "valorA");
+cache.put("B", "valorB");
+cache.put("C", "valorC");
+cache.get("A"); // A se marca como reciente
+cache.put("D", "valorD"); // B se elimina
 ```
 
-## Próximamente
+## Escenarios BDD
 
-Documentación completa con escenarios BDD.
+Tests para:
+- Orden de inserción
+- Implementación de caché LRU
+- Iteración predecible

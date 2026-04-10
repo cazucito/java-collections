@@ -1,31 +1,60 @@
 # PriorityQueue
 
-`PriorityQueue` implementa una cola ordenada por **prioridad**.
+`PriorityQueue` implementa una cola ordenada por **prioridad**, no por orden de llegada.
 
 ## Características
 
-- ✅ Ordenada por prioridad (natural o Comparator)
-- ✅ peek/poll: **O(1)**
-- ✅ insert: **O(log n)**
-- ❌ No permite null
-- ❌ No es thread-safe
+| Aspecto | Detalle |
+|---------|---------|
+| **Estructura** | Heap (árbol binario completo) |
+| **Orden** | Por prioridad (natural o Comparator) |
+| **Duplicados** | Permite duplicados |
+| **Operaciones** | offer/poll: O(log n), peek: O(1) |
+| **Null** | **NO** permite elementos `null` |
 
 ## Cuándo usar
 
-- Planificación de tareas por prioridad
-- Algoritmos de pathfinding (Dijkstra, A*)
+- Planificación por prioridad
+- Algoritmos Dijkstra/A*
 - Sistemas de recomendación
+- Procesamiento de tareas
 
-## Ejemplo
+## Ejemplos
 
 ```java
+// Prioridad natural (menor primero)
 Queue<Integer> pq = new PriorityQueue<>();
 pq.offer(5);
 pq.offer(1);
 pq.offer(3);
-System.out.println(pq.poll()); // 1 (menor prioridad)
+System.out.println(pq.poll()); // 1
+
+// Comparator personalizado (mayor primero)
+Queue<Integer> maxHeap = new PriorityQueue<>(
+    Comparator.reverseOrder()
+);
+
+// Con objetos complejos
+class Tarea implements Comparable<Tarea> {
+    int prioridad;
+    String nombre;
+    
+    @Override
+    public int compareTo(Tarea o) {
+        return Integer.compare(this.prioridad, o.prioridad);
+    }
+}
+
+Queue<Tarea> tareas = new PriorityQueue<>();
+tareas.offer(new Tarea(1, "Urgente"));
+tareas.offer(new Tarea(3, "Baja"));
+tareas.offer(new Tarea(2, "Media"));
+// poll() retorna "Urgente" primero
 ```
 
-## Próximamente
+## Escenarios BDD
 
-Documentación completa con escenarios BDD.
+Tests para:
+- Ordenamiento por prioridad
+- Operaciones offer/poll/peek
+- Implementación de cola de tareas
