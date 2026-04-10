@@ -19,7 +19,7 @@
 
     <!-- Dependencias -->
     <junit.version>5.10.1</junit.version>
-    <cucumber.version>7.14.0</cucumber.version>
+    <cucumber.version>7.34.3</cucumber.version>
     <assertj.version>3.27.7</assertj.version>
 
     <!-- Plugins de calidad -->
