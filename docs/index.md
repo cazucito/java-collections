@@ -1,9 +1,9 @@
 # Java Collections Examples
 
-[![CI](https://github.com/cazucito/java-collections/actions/workflows/ci.yml/badge.svg)](https://github.com/cazucito/java-collections/actions)
-[![Java 21](https://img.shields.io/badge/Java-21-blue.svg)](https://openjdk.org/projects/jdk/21/)
-[![Maven](https://img.shields.io/badge/Maven-3.9+-blue.svg)](https://maven.apache.org/)
-[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
+![CI](https://github.com/cazucito/java-collections/actions/workflows/ci.yml/badge.svg)
+![Java 21](https://img.shields.io/badge/Java-21-blue.svg)
+![Maven](https://img.shields.io/badge/Maven-3.9+-blue.svg)
+![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)
 
 > **Ejemplos prácticos del API Java Collections con enfoque BDD/TDD**
 
@@ -49,41 +49,12 @@ java-collections/
 
 ## Navegación rápida
 
-<div class="grid cards" markdown>
-
--   :material-play-circle:{ .lg .middle } **Empezar**
-
-    ---
-
-    Configura tu entorno y ejecuta tu primer test en minutos.
-
-    [:octicons-arrow-right-24: Instalación](introduccion/instalacion.md)
-
--   :material-format-list-bulleted:{ .lg .middle } **Colecciones**
-
-    ---
-
-    Aprende List, Set, Map, Queue con ejemplos prácticos.
-
-    [:octicons-arrow-right-24: Ver colecciones](colecciones/index.md)
-
--   :material-lightbulb:{ .lg .middle } **Casos de Uso**
-
-    ---
-
-    Soluciones reales: cachés, procesamiento de datos, y más.
-
-    [:octicons-arrow-right-24: Ver casos](casos-de-uso/index.md)
-
--   :material-alert:{ .lg .middle } **Anti-Patrones**
-
-    ---
-
-    Errores comunes y cómo evitar memory leaks y excepciones.
-
-    [:octicons-arrow-right-24: Ver anti-patrones](anti-patrones/index.md)
-
-</div>
+| Sección | Descripción | Enlace |
+|---------|-------------|--------|
+| **Empezar** | Configura tu entorno y ejecuta tu primer test en minutos. | [Instalación](introduccion/instalacion.md) |
+| **Colecciones** | Aprende List, Set, Map, Queue con ejemplos prácticos. | [Ver colecciones](colecciones/index.md) |
+| **Casos de Uso** | Soluciones reales: cachés, procesamiento de datos, y más. | [Ver casos](casos-de-uso/index.md) |
+| **Anti-Patrones** | Errores comunes y cómo evitar memory leaks y excepciones. | [Ver anti-patrones](anti-patrones/index.md) |
 
 ## Filosofía del Proyecto
 
@@ -113,4 +84,4 @@ Este proyecto está licenciado bajo [Apache 2.0](LICENSE).
 
 ---
 
-**Hecho con ❤️ y muchos tests pasando** :material-check-all:
+**Hecho con ❤️ y muchos tests pasando** ✅
