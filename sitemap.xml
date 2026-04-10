@@ -5,6 +5,46 @@
          <lastmod>2026-04-10</lastmod>
     </url>
     <url>
+         <loc>https://cazucito.github.io/java-collections/anti-patrones/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/anti-patrones/concurrent-modification/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/anti-patrones/equals-vs-reference/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/anti-patrones/memory-leaks/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/avanzado/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/avanzado/algoritmos/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/avanzado/concurrencia/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/avanzado/generics/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/avanzado/streams/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/casos-de-uso/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
          <loc>https://cazucito.github.io/java-collections/colecciones/</loc>
          <lastmod>2026-04-10</lastmod>
     </url>
@@ -13,11 +53,91 @@
          <lastmod>2026-04-10</lastmod>
     </url>
     <url>
+         <loc>https://cazucito.github.io/java-collections/colecciones/list/cuando-usar/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/colecciones/list/linkedlist/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/colecciones/map/hashmap/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/colecciones/map/linkedhashmap/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/colecciones/map/treemap/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/colecciones/queue/arraydeque/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/colecciones/queue/priorityqueue/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/colecciones/set/hashset/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/colecciones/set/linkedhashset/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/colecciones/set/treeset/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/contribucion/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/contribucion/arquitectura/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/contribucion/estandares/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
          <loc>https://cazucito.github.io/java-collections/introduccion/</loc>
          <lastmod>2026-04-10</lastmod>
     </url>
     <url>
          <loc>https://cazucito.github.io/java-collections/introduccion/instalacion/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/introduccion/primeros-pasos/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/referencia/diagramas/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/referencia/escenarios-bdd/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/referencia/faq/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/rendimiento/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/rendimiento/benchmarks/</loc>
+         <lastmod>2026-04-10</lastmod>
+    </url>
+    <url>
+         <loc>https://cazucito.github.io/java-collections/rendimiento/complejidad/</loc>
          <lastmod>2026-04-10</lastmod>
     </url>
 </urlset>
