@@ -1,9 +1,9 @@
 # Java Collections Examples
 
-![CI](https://github.com/cazucito/java-collections/actions/workflows/ci.yml/badge.svg)
-![Java 21](https://img.shields.io/badge/Java-21-blue.svg)
-![Maven](https://img.shields.io/badge/Maven-3.9+-blue.svg)
-![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)
+[![CI](https://img.shields.io/github/actions/workflow/status/cazucito/java-collections/ci.yml?branch=main&label=CI)](https://github.com/cazucito/java-collections/actions/workflows/ci.yml)
+[![Java](https://img.shields.io/badge/Java-21-blue?logo=openjdk)](https://openjdk.org/projects/jdk/21/)
+[![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?logo=apachemaven)](https://maven.apache.org/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green)](LICENSE)
 
 > **Ejemplos prácticos del API Java Collections con enfoque BDD/TDD**
 

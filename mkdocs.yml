@@ -12,6 +12,10 @@ copyright: Copyright &copy; 2024 cazucito - Apache 2.0 License
 theme:
   name: material
   language: es
+  logo: material/library
+  favicon: material/library
+  icon:
+    repo: fontawesome/brands/github
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -31,14 +35,21 @@ theme:
         name: Switch to light mode
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.footer
+    - navigation.indexes
     - search.suggest
     - search.highlight
+    - search.share
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - content.tooltips
 
 plugins:
   - search:
@@ -121,6 +132,9 @@ nav:
     - contribucion/index.md
     - contribucion/arquitectura.md
     - contribucion/estandares.md
+
+extra_css:
+  - stylesheets/extra.css
 
 extra:
   social:
