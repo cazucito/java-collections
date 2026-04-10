@@ -6,6 +6,8 @@
 package io.github.cazucito.collections.list;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -107,5 +109,86 @@ public class ArrayListExample {
    */
   public List<String> getAllElements() {
     return new ArrayList<>(elements);
+  }
+
+  /** Ordena la lista alfabéticamente. */
+  public void sort() {
+    Collections.sort(elements);
+  }
+
+  /** Ordena la lista con un comparador personalizado (descendente). */
+  public void sortDescending() {
+    elements.sort(Comparator.reverseOrder());
+  }
+
+  /**
+   * Encuentra el índice de la primera ocurrencia de un elemento.
+   *
+   * @param element el elemento a buscar
+   * @return índice del elemento, o -1 si no existe
+   */
+  public int indexOf(final String element) {
+    return elements.indexOf(element);
+  }
+
+  /**
+   * Encuentra el índice de la última ocurrencia de un elemento.
+   *
+   * @param element el elemento a buscar
+   * @return último índice del elemento, o -1 si no existe
+   */
+  public int lastIndexOf(final String element) {
+    return elements.lastIndexOf(element);
+  }
+
+  /**
+   * Reemplaza un elemento en la posición especificada.
+   *
+   * @param index índice donde reemplazar
+   * @param element nuevo elemento
+   * @return el elemento anterior
+   */
+  public String setElement(final int index, final String element) {
+    return elements.set(index, element);
+  }
+
+  /**
+   * Agrega un elemento en un índice específico.
+   *
+   * @param index índice donde agregar
+   * @param element elemento a agregar
+   */
+  public void addElementAt(final int index, final String element) {
+    elements.add(index, element);
+  }
+
+  /**
+   * Elimina un elemento en el índice especificado.
+   *
+   * @param index índice del elemento a eliminar
+   * @return el elemento eliminado
+   */
+  public String removeElementAt(final int index) {
+    return elements.remove(index);
+  }
+
+  /**
+   * Obtiene una sublista del rango especificado.
+   *
+   * @param fromIndex índice inicial (inclusive)
+   * @param toIndex índice final (exclusive)
+   * @return sublista con los elementos del rango
+   */
+  public List<String> getSubList(final int fromIndex, final int toIndex) {
+    return new ArrayList<>(elements.subList(fromIndex, toIndex));
+  }
+
+  /**
+   * Convierte la lista a un array.
+   *
+   * @return array con los elementos de la lista
+   */
+  public String[] toArray() {
+    return elements.toArray(new String[0]);
   }
 }

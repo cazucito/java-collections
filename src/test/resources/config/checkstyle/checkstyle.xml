@@ -117,7 +117,9 @@
         <module name="NoWhitespaceBefore"/>
         <module name="OperatorWrap"/>
         <module name="ParenPad"/>
-        <module name="SeparatorWrap"/>
+        <module name="SeparatorWrap">
+            <property name="option" value="NL"/>
+        </module>
         <module name="SingleSpaceSeparator"/>
         <module name="TypecastParenPad"/>
         <module name="WhitespaceAfter"/>
