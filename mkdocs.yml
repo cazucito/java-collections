@@ -12,87 +12,48 @@ copyright: Copyright &copy; 2024 cazucito - Apache 2.0 License
 theme:
   name: material
   language: es
-  logo: material/library
-  favicon: material/library
-  icon:
-    repo: fontawesome/brands/github
-  font:
-    text: Inter
-    code: JetBrains Mono
   palette:
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
       primary: blue
-      accent: pink
+      accent: blue
       toggle:
         icon: material/brightness-7
         name: Cambiar a modo oscuro
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       primary: blue
-      accent: pink
+      accent: blue
       toggle:
         icon: material/brightness-4
         name: Cambiar a modo claro
   features:
     - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.sections
-    - navigation.expand
     - navigation.top
-    - navigation.footer
-    - navigation.indexes
     - search.suggest
-    - search.highlight
-    - search.share
-    - content.tabs.link
-    - content.code.annotation
     - content.code.copy
-    - content.action.edit
-    - content.action.view
-    - content.tooltips
 
 plugins:
   - search:
       lang: 
         - es
         - en
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - minify:
-      minify_html: true
-  - privacy:
-      assets: true
-      assets_exclude: 
-        - cdn.jsdelivr.net
-        - fonts.googleapis.com
-        - fonts.gstatic.com
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.details
-  - pymdownx.tasklist:
-      custom_checkbox: true
   - admonition
   - tables
   - attr_list
   - md_in_html
   - def_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      options:
-        custom_icons:
-          - material
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Inicio: index.md
@@ -143,12 +104,7 @@ nav:
     - contribucion/arquitectura.md
     - contribucion/estandares.md
 
-extra_css:
-  - stylesheets/extra.css
-
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/cazucito
-  version:
-    provider: mike
