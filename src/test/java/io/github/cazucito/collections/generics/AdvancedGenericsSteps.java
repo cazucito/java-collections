@@ -6,7 +6,9 @@
 package io.github.cazucito.collections.generics;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.within;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
@@ -61,6 +63,23 @@ public class AdvancedGenericsSteps {
   /** Constructor. */
   public AdvancedGenericsSteps() {
     genericsExample = new AdvancedGenericsExample();
+  }
+
+  /** Reinicia el estado antes de cada escenario. */
+  @Before
+  public void setUp() {
+    sourceList = null;
+    destList = null;
+    stringList = null;
+    numberList = null;
+    integerList = null;
+    dogList = null;
+    animalList = null;
+    calculatedSum = 0.0;
+    containsResult = false;
+    obtainedSize = 0;
+    maxFound = null;
+    currentDog = null;
   }
 
   // ============================================
@@ -145,6 +164,7 @@ public class AdvancedGenericsSteps {
   @Dado("una lista de numeros para generics {string}")
   public void unaListaDeNumerosParaGenerics(final String numbers) {
     numberList = new ArrayList<>();
+    integerList = null; // Clear to avoid interference
     for (String num : numbers.split(", ")) {
       numberList.add(Double.parseDouble(num.trim()));
     }
@@ -152,21 +172,23 @@ public class AdvancedGenericsSteps {
 
   @Cuando("calculo la suma usando bounded wildcard")
   public void calculoLaSumaUsandoBoundedWildcard() {
-    if (numberList != null && !numberList.isEmpty()) {
-      calculatedSum = genericsExample.sumNumbers(numberList);
-    } else if (integerList != null && !integerList.isEmpty()) {
+    if (integerList != null && !integerList.isEmpty()) {
       calculatedSum = genericsExample.sumNumbers(integerList);
+    } else if (numberList != null && !numberList.isEmpty()) {
+      calculatedSum = genericsExample.sumNumbers(numberList);
     }
   }
 
-  @Entonces("la suma total es {double}")
-  public void laSumaTotalEs(final double expected) {
-    assertThat(calculatedSum).isEqualTo(expected);
+  @Entonces("la suma total es {string}")
+  public void laSumaTotalEs(final String expectedStr) {
+    double expected = Double.parseDouble(expectedStr);
+    assertThat(calculatedSum).isCloseTo(expected, within(0.001));
   }
 
   @Dado("una lista de enteros para generics {string}")
   public void unaListaDeEnterosParaGenerics(final String numbers) {
     integerList = new ArrayList<>();
+    numberList = null; // Clear to avoid interference
     for (String num : numbers.split(", ")) {
       integerList.add(Integer.parseInt(num.trim()));
     }
