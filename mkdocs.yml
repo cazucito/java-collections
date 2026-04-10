@@ -1,7 +1,8 @@
 site_name: Java Collections Examples
 site_description: Ejemplos del API Java Collections con enfoque BDD/TDD
 site_author: cazucito
-site_url: https://cazucito.github.io/java-collections
+site_url: https://cazucito.github.io/java-collections/
+strict: false
 
 repo_name: cazucito/java-collections
 repo_url: https://github.com/cazucito/java-collections
