@@ -36,3 +36,27 @@
 .md-footer {
   background-color: #1565c0;
 }
+
+/* Modo oscuro - Dark mode styles */
+[data-md-color-scheme="slate"] .md-typeset pre {
+  background-color: #1e1e1e !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset pre > code {
+  background-color: #1e1e1e !important;
+  color: #d4d4d4 !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background-color: #2d2d2d;
+  color: #d4d4d4;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table th {
+  background-color: #1565c0;
+  color: white;
+}
