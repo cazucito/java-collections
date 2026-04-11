@@ -12,23 +12,15 @@
 
 ## Cuándo usar ArrayList
 
-<div class="grid cards" markdown>
+### ✅ Ideal para
+- Acceso frecuente por índice
+- Recorrido secuencial
+- Listas de tamaño conocido o poco cambiante
 
--   :material-check:{ .lg .middle } **Ideal para**
-
-    ---
-    - Acceso frecuente por índice
-    - Recorrido secuencial
-    - Listas de tamaño conocido o poco cambiante
-
--   :material-close:{ .lg .middle } **Evitar cuando**
-
-    ---
-    - Inserciones/eliminaciones frecuentes en medio
-    - Necesitas thread-safety
-    - Memoria es crítica (tiene capacidad reservada)
-
-</div>
+### ❌ Evitar cuando
+- Inserciones/eliminaciones frecuentes en medio
+- Necesitas thread-safety
+- Memoria es crítica (tiene capacidad reservada)
 
 ## Ejemplo básico
 
