@@ -184,6 +184,20 @@ Escenario: CopyOnWriteArrayList permite lectura concurrente
   Entonces la iteración no lanza excepción
 ```
 
+## Recursos Adicionales
+
+### Thread-Safe Collections - Proyecto Complementario
+
+Para una exploración más profunda de colecciones thread-safe, incluyendo implementaciones adicionales y patrones avanzados de concurrencia, visita:
+
+🔗 **[Thread-Safe Collections](https://cazucito.github.io/thread-safe-collections/)**
+
+Este proyecto complementario cubre:
+- Implementaciones thread-safe adicionales
+- Patrones de diseño concurrente
+- Ejemplos avanzados de sincronización
+- Mejores prácticas para entornos multi-hilo
+
 ## Best Practices
 
 1. **Prefiere ConcurrentHashMap** sobre `Collections.synchronizedMap()`
