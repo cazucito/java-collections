@@ -1,5 +1,7 @@
 # Java Collections Examples
 
+[![Status](https://img.shields.io/badge/status-completed-brightgreen)](https://github.com/cazucito/java-collections/releases/tag/v1.0.0)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/cazucito/java-collections/releases/tag/v1.0.0)
 [![CI](https://img.shields.io/github/actions/workflow/status/cazucito/java-collections/ci.yml?branch=main&label=CI)](https://github.com/cazucito/java-collections/actions/workflows/ci.yml)
 [![Java](https://img.shields.io/badge/Java-21-ED8B00?logo=openjdk&logoColor=white)](https://openjdk.org/projects/jdk/21/)
 [![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?logo=apachemaven&logoColor=white)](https://maven.apache.org/)
