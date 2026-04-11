@@ -82,5 +82,5 @@ La documentación está organizada en secciones que se complementan:
 
 ## Próximos pasos
 
-- [:octicons-arrow-right-24: Instalar y configurar](instalacion.md)
-- [:octicons-arrow-right-24: Tu primer escenario BDD](primeros-pasos.md)
+- ➡️ [Instalar y configurar](instalacion.md)
+- ➡️ [Tu primer escenario BDD](primeros-pasos.md)

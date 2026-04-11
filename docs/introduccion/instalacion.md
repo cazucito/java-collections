@@ -151,4 +151,4 @@ export MAVEN_OPTS="-Dfile.encoding=UTF-8"
 
 ## Próximos pasos
 
-[:octicons-arrow-right-24: Tu primer escenario BDD](primeros-pasos.md)
+➡️ [Tu primer escenario BDD](primeros-pasos.md)
